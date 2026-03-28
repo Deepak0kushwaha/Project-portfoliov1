@@ -98,6 +98,11 @@ document.addEventListener("DOMContentLoaded", () => {
       return null;
     }
 
+    // Reject any URL that resolves outside the designated media directory
+    if (!mediaUrl.startsWith(directoryUrl.toString())) {
+      return null;
+    }
+
     let kind = "file";
 
     if (rawEntry.type === "video" || isVideo) {

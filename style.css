@@ -2607,12 +2607,8 @@ main p,
 }
 
 /* ----------------------------------------------------------
-   9. MOBILE — project stack vertical list + pdf link
+   9. MOBILE — project stack vertical list, pdf viewer tweaks
    ---------------------------------------------------------- */
-.publication-mobile-link {
-  display: none;
-}
-
 @media (max-width: 767px) {
   /* Project stack: disable stacked deck, show flat list */
   .projects-stack-shell {
@@ -2644,15 +2640,39 @@ main p,
     pointer-events: auto !important;
   }
 
-  /* PDF viewer: replace with a simple link */
+  /* PDF viewer — keep visible, optimise for touch */
   .publication-viewer-shell {
-    display: none !important;
+    padding: 16px 12px;
   }
 
-  .publication-mobile-link {
-    display: flex !important;
-    justify-content: center;
-    padding: 32px 0;
+  .publication-viewer-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .publication-viewer-button-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 6px;
+  }
+
+  .publication-viewer-btn {
+    padding: 10px 4px;
+    font-size: 0.8rem;
+    min-height: 44px;
+  }
+
+  .publication-pdf-stage {
+    min-height: 460px;
+    padding: 10px;
+    /* Hint that horizontal swipe changes pages */
+    overscroll-behavior-x: contain;
+  }
+
+  .publication-viewer-status {
+    text-align: center;
+    font-size: 0.82rem;
   }
 
   /* Contact CTA responsive */

@@ -1,69 +1,20 @@
-﻿{
-    "items":  [
-                  {
-                      "url":  "analysis_video.mp4",
-                      "label":  "Analysis Video",
-                      "type":  "video"
-                  },
-                  {
-                      "url":  "b2q.mp4",
-                      "label":  "B2Q",
-                      "type":  "video"
-                  },
-                  {
-                      "url":  "blenderllm3.mp4",
-                      "label":  "Blenderllm3",
-                      "type":  "video"
-                  },
-                  {
-                      "url":  "cfd_fan.mp4",
-                      "label":  "CFD FAN",
-                      "type":  "video"
-                  },
-                  {
-                      "url":  "fan_cad.mp4",
-                      "label":  "FAN CAD",
-                      "type":  "video"
-                  },
-                  {
-                      "url":  "fft_cwt.png",
-                      "label":  "FFT CWT",
-                      "type":  "image"
-                  },
-                  {
-                      "url":  "fft_stft.png",
-                      "label":  "FFT STFT",
-                      "type":  "image"
-                  },
-                  {
-                      "url":  "Flange_cad.mp4",
-                      "label":  "Flange CAD",
-                      "type":  "video"
-                  },
-                  {
-                      "url":  "InceptionV3 based blockage fault diagnosis of centrifugal pump.pdf",
-                      "label":  "Inception V3 Based Blockage Fault Diagnosis OF Centrifugal PUMP",
-                      "type":  "file"
-                  },
-                  {
-                      "url":  "m_0.06animation.gif",
-                      "label":  "M 0.06animation",
-                      "type":  "image"
-                  },
-                  {
-                      "url":  "MSppt.mp4",
-                      "label":  "MSppt",
-                      "type":  "video"
-                  },
-                  {
-                      "url":  "paper.png",
-                      "label":  "Paper",
-                      "type":  "image"
-                  },
-                  {
-                      "url":  "papertrading_upl.mp4",
-                      "label":  "Papertrading UPL",
-                      "type":  "video"
-                  }
-              ]
+{
+  "items": [
+    { "url": "analysis_video.mp4",   "label": "Analysis Video",    "type": "video" },
+    { "url": "b2q.mp4",              "label": "B2Q",               "type": "video" },
+    { "url": "blenderllm3.mp4",      "label": "Blenderllm3",       "type": "video" },
+    { "url": "cfd_fan.mp4",          "label": "CFD Fan",           "type": "video" },
+    { "url": "contentcreatorAI.png", "label": "Content Creator AI","type": "image" },
+    { "url": "fan_cad.mp4",          "label": "Fan CAD",           "type": "video" },
+    { "url": "fft_cwt.png",          "label": "FFT CWT",           "type": "image" },
+    { "url": "fft_stft.png",         "label": "FFT STFT",          "type": "image" },
+    { "url": "Flange_cad.mp4",       "label": "Flange CAD",        "type": "video" },
+    { "url": "flutter.png",          "label": "Flutter App",       "type": "image" },
+    { "url": "m_0.06animation.gif",  "label": "M 0.06 Animation",  "type": "image" },
+    { "url": "MSppt.mp4",            "label": "MS Presentation",   "type": "video" },
+    { "url": "paper.png",            "label": "Paper",             "type": "image" },
+    { "url": "papertrading_upl.mp4", "label": "Papertrading UPL",  "type": "video" },
+    { "url": "RAGQA.png",            "label": "RAG Q&A System",    "type": "image" },
+    { "url": "speakerdia.png",       "label": "Speaker Diagram",   "type": "image" }
+  ]
 }

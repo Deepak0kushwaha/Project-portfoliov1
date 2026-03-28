@@ -848,10 +848,8 @@
 
                 <div class="research-links">
                   <a
-                    href="InceptionV3 based blockage fault diagnosis of centrifugal pump.pdf"
+                    href="#publications"
                     class="btn-primary"
-                    target="_blank"
-                    rel="noopener noreferrer"
                   >
                     View Publication
                   </a>
@@ -1290,17 +1288,6 @@
                 Rendering PDF...
               </p>
             </div>
-          </div>
-          <div class="publication-mobile-link">
-            <a
-              href="InceptionV3 based blockage fault diagnosis of centrifugal pump.pdf"
-              class="btn-primary"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="bi bi-file-earmark-pdf" style="margin-right:8px"></i>
-              Open Publication PDF
-            </a>
           </div>
         </div>
       </section>
@@ -2220,6 +2207,35 @@
         stage.addEventListener("mousedown", () => {
           stage.focus({ preventScroll: true });
         });
+
+        // Touch swipe: left = next page, right = prev page
+        let touchStartX = 0;
+        let touchStartY = 0;
+
+        stage.addEventListener("touchstart", (event) => {
+          touchStartX = event.touches[0].clientX;
+          touchStartY = event.touches[0].clientY;
+        }, { passive: true });
+
+        stage.addEventListener("touchend", async (event) => {
+          const dx = event.changedTouches[0].clientX - touchStartX;
+          const dy = Math.abs(event.changedTouches[0].clientY - touchStartY);
+
+          // Require a meaningful horizontal swipe that isn't mostly vertical
+          if (Math.abs(dx) < 48 || dy > Math.abs(dx)) {
+            return;
+          }
+
+          if (dx < 0 && pdfDocument && currentPage < pdfDocument.numPages) {
+            currentPage += 1;
+            stage.scrollTop = 0;
+            await renderPage(currentPage);
+          } else if (dx > 0 && pdfDocument && currentPage > 1) {
+            currentPage -= 1;
+            stage.scrollTop = 0;
+            await renderPage(currentPage);
+          }
+        }, { passive: true });
 
         window.addEventListener("resize", () => {
           if (!pdfDocument) {
