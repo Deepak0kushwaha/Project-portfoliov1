@@ -1,0 +1,12 @@
+# Logs
+.local-server.*.log
+
+# Temp / dev files
+remote-main.tmp.css
+hero-video-preview-check.png
+sync-hero-media.ps1
+sync-research-media.ps1
+test-results/
+
+# Claude Code internals
+.claude/

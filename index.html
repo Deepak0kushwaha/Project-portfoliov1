@@ -1,428 +1,2318 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Deepak Kumar – AI/ML &amp; Mechanical Engineer</title>
-    <!-- Use system fonts for a smooth, professional look. Styling is controlled via CSS variables. -->
-    <link rel="stylesheet" href="style.css" />
-    </head>
-  <body>
-    <!-- The full-page particle effect will be added via tsParticles; no separate background div required -->
-    <!-- Navigation bar -->
-    <nav class="nav" id="top">
-      <div class="nav-container">
-        <div class="logo">Deepak&nbsp;Kumar</div>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-        <label for="nav-toggle" class="hamburger">
-          <span></span>
-        </label>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Deepak Kumar - AI/ML &amp; Mechanical Engineer</title>
+    <meta
+      name="description"
+      content="Portfolio of Deepak Kumar, Senior AI/ML Engineer working across physics-aware AI, CAD to simulation workflows, signal intelligence, and agentic systems."
+    />
 
-    <!-- Hero section with particles background -->
-    <header class="hero-section">
-      <div id="tsparticles" class="particles"></div>
-      <div class="hero-content">
-        <!-- Profile photo on the left side of the hero.  A rounded rectangle image helps personalise the page. -->
-        <img src="mypic.jpg" alt="Profile photo" class="profile-photo" />
-        <h1 class="hero-title">Senior Engineer - AI/ML</h1>
-        <p class="hero-subtitle">
-          Current Organization - Havells India Ltd.
-        </p>
-        <p class="hero-subtitle">
-          Location - Noida, NCR (UP).
-        </p>
-        <div class="hero-buttons">
-          <a href="Deepak_resumeJan.pdf" class="btn primary" download>Download&nbsp;Resume</a>
-          <a href="#contact" class="btn secondary">Get&nbsp;in&nbsp;Touch</a>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://bootstrapmade.com/content/demo/MyPage/assets/css/main.css"
+      rel="stylesheet"
+    />
+    <link href="media.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body class="index-page">
+    <div id="tsparticles" aria-hidden="true"></div>
+    <canvas id="neural-sparks" aria-hidden="true"></canvas>
+
+    <header
+      id="header"
+      class="header dark-background d-flex flex-column justify-content-between"
+    >
+      <i class="header-toggle d-xl-none bi bi-list" aria-label="Toggle menu"></i>
+
+      <div class="header-top">
+        <div class="profile-img">
+          <img src="mypic.jpg" alt="Deepak Kumar" class="img-fluid" />
         </div>
+
+        <a href="#hero" class="logo d-flex align-items-center justify-content-center">
+          <h1 class="sitename">Deepak Kumar</h1>
+        </a>
       </div>
-      <div class="hero-image">
-        <!-- Futuristic illustration -->
-        <img src="hero2.jpg" alt="Futuristic AI illustration" />
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li>
+            <a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a>
+          </li>
+          <li>
+            <a href="#about"><i class="bi bi-person navicon"></i> About</a>
+          </li>
+          <li>
+            <a href="#skills"><i class="bi bi-bar-chart navicon"></i> Skills</a>
+          </li>
+          <li>
+            <a href="#experience"><i class="bi bi-file-earmark-text navicon"></i> Experience</a>
+          </li>
+          <li>
+            <a href="#research"><i class="bi bi-journal-richtext navicon"></i> Research</a>
+          </li>
+          <li>
+            <a href="#projects"><i class="bi bi-images navicon"></i> Projects</a>
+          </li>
+          <li>
+            <a href="#publications"><i class="bi bi-award navicon"></i> Publications</a>
+          </li>
+          <li>
+            <a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="social-links text-center">
+        <a href="mailto:dkushwaha6793@gmail.com" aria-label="Email">
+          <i class="bi bi-envelope"></i>
+        </a>
+        <a
+          href="https://linkedin.com/in/iitiandeepak-kumar"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a
+          href="https://github.com/Deepak0kushwaha"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <i class="bi bi-github"></i>
+        </a>
+        <a
+          href="https://orcid.org/0009-0000-4333-3938"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="ORCiD"
+        >
+          <i class="bi bi-journal-richtext"></i>
+        </a>
+      </div>
+
+      <div class="visitor-counter" id="visitor-counter" aria-live="polite" aria-label="Unique visitor count">
+        <i class="bi bi-eye-fill visitor-counter-icon"></i>
+        <div class="visitor-counter-body">
+          <span class="visitor-counter-num" id="visitor-count">—</span>
+          <span class="visitor-counter-label">unique visitors</span>
+        </div>
+        <span class="visitor-counter-badge" id="visitor-you-badge" style="display:none" title="You are being counted as a new visitor">new</span>
       </div>
     </header>
 
-    <!-- About section -->
-    <section id="about" class="section about-section">
-      <div class="container">
-        <h2>About Me</h2>
-        <div class="about-grid">
-          <div style="text-align: justify; text-justify: inter-word; line-height: 1.6; font-size: 16px;">
-            <p style="margin: 0 0 12px 0; text-indent: 32px;"></p>
-              I started out as a mechanical engineer who loved understanding why machines behave the way they do—not just on paper, but in the real world. After completing my BE, I stepped into industry early, working on tooling and design where precision mattered every day: GD&T, manufacturability, and delivering designs that could actually be built. That foundation taught me discipline, practical thinking, and how to work with teams that depend on your output.
-            </p>
-            <p style="margin: 0 0 12px 0; text-indent: 32px;"></p>
-              Soon, my curiosity pulled me deeper into high-end engineering. At Gas Turbine Research Establishment (GTRE) under Defence Research and Development Organisation (DRDO), I got exposure to aircraft engine component design and optimization, where I learned how serious engineering problems are solved—through analysis, iterations, and strong cross-functional coordination. It was there I began to realize that simulation and data together can create a powerful edge.
-            </p>  
-              That realization pushed me toward research, and I joined IIT Indore for my MS (Research). During this phase, I didn’t just “study”—I built. I worked on centrifugal pump blockage fault diagnosis and used deep learning to make the system smarter, modifying InceptionV3 and achieving around 95% accuracy. Along the way, I also took responsibility beyond technical work—serving in student leadership roles that strengthened how I plan, communicate, and execute with people. This was the phase where I started turning deep learning concepts into real-world, measurable outcomes.
-            <p style="margin: 0 0 12px 0; text-indent: 32px;"></p>
-              From there, my work naturally expanded into GenAI and Agentic AI, especially through freelancing projects where delivery and experimentation happen in real time. For example, I built an agentic workflow for audio processing and a Hinglish transcription pipeline where the system first cleans noisy locomotive crew audio using signal processing, then automatically detects speech segments using VAD, and finally runs ASR to generate Hindi-English transcripts—followed by LLM-based text normalization and speaker diarization merging. It wasn’t just about generating text; it was about building a reliable end-to-end system that could handle messy real-world inputs. More projects can be seen under the “Freelance Projects” section.
-            </p>
-            <p style="margin: 0 0 12px 0; text-indent: 32px;"></p>
-              Today, my journey has brought me to CRI - Havells India Limited as a Senior Engineer in AI/ML, where I’m building AI systems that connect CAD → CFD/CAE → predictions → decisions. My focus is physics-aware AI: creating automated pipelines and meta-models using GNNs, PointNet, and PINNs to accelerate thermal, flow, and modal analysis. This includes real industrial problems like LED thermal and light-performance prediction, and product-focused simulation work like fan aerodynamics and AC modal analysis. I enjoy turning heavy engineering workflows into deployable AI products—complete with CI/CD, monitoring, drift detection, and retraining. Alongside this, one of the most exciting parts of my work is the CAD Agent project, where I’m building an Agentic AI solution that can generate CAD designs from a simple text prompt. The goal is to make CAD creation feel conversational: the user describes what they want, the agent understands requirements, plans steps, retrieves relevant context, generates geometry through CAD tools, validates constraints, and iterates until the design matches intent. This project showcases my capability in building AI agents—not only prompting an LLM, but designing the full agent workflow: planning, tool-use, verification, logging, and continuous improvement.
-            </p>
-            <p style="margin: 0 0 12px 0; text-indent: 32px;"></p>
-              What really defines me is how I think and work. I carry an entrepreneurship mindset—I don’t stop at “model training.” I like building complete solutions: pipelines, automation, deployment, and real usability. I’m adaptive by nature, because my work sits at the intersection of mechanical engineering, CFD/CAE, and AI/ML. That interdisciplinarity has become my strength: I can talk to design teams, simulation teams, and AI teams—and translate requirements into working systems. And I genuinely enjoy collaborating with cross-functional teams because the best outcomes usually come when engineering, product, and IT move together.
-            </p>
-            <p style="margin: 0 0 12px 0; text-indent: 32px;"></p>
-              That’s my story so far—an engineer who grew from design fundamentals into research and now into production AI, focused on building practical, data-aware and agent-driven intelligence that speeds up real engineering decisions.
-            </p>
-          </div>
-          <div class="highlights">
-            <div class="highlight">
-              <span class="highlight-number">4.5+ Years</span>
-              <span class="highlight-label">Total Experience (Industrial+Research+GAT)</span>
+    <main class="main">
+      <section id="hero" class="hero section">
+        <div class="container">
+          <div class="row align-items-center hero-layout">
+            <div class="col-lg-5 col-xl-5 order-1 order-lg-1 hero-copy-column">
+              <div class="hero-content">
+                <span class="hero-kicker">APPLIED AI FOR ENGINEERING SYSTEMS</span>
+                <h1>AI/ML Researcher</h1>
+                <p class="hero-summary">
+                  I build physics-aware deep learning methodologies for
+                  engineering prediction, enabling faster and more reliable
+                  simulation-driven decisions. My work also focuses on Agentic
+                  AI and GenAI systems that automate repetitive engineering
+                  workflows across CAD, CFD, CAE, and validation pipelines.
+                </p>
+                <div class="hero-meta">
+                  <span><i class="bi bi-buildings"></i>CRI - Havells India Ltd.</span>
+                  <span><i class="bi bi-geo-alt"></i>Noida, NCR (UP)</span>
+                </div>
+                <div class="hero-specialties">
+                  <span>Agentic AI · GenAI</span>
+                  <span>Surrogate Modelling</span>
+                  <span>CAD / CFD / CAE Automation</span>
+                </div>
+                <div class="hero-actions">
+                  <a
+                    href="Deepak_resumeJan.pdf"
+                    class="btn-primary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Resume
+                  </a>
+                  <a href="#contact" class="btn-secondary">Get In Touch</a>
+                  <a
+                    href="https://medium.com/@dkushwaha6793"
+                    class="btn-secondary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Blog
+                  </a>
+                </div>
+                <div class="hero-stats">
+                  <div class="stat-item">
+                    <span class="stat-number">4.5+</span>
+                    <span class="stat-label">Years across industry and research</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label">Industrial AI programs delivered</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Freelance AI product builds</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="highlight">
-              <span class="highlight-number">3+</span>
-              <span class="highlight-label">Industrial Projects</span>
-            </div>
-            <div class="highlight">
-              <span class="highlight-number">5+ </span>
-              <span class="highlight-label">Freelance Projects</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Skills section -->
-    <section id="skills" class="section skills-section">
-      <div class="container">
-        <h2>Technical Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-card">
-            <h3>AI/ML Developer Skillsets</h3>
-            <ul style="text-align: justify; text-justify: inter-word; margin: 0 0 12px 0;">
-                Python, Pandas, Numpy, Matplotlib, plotly, seaborn, PINN, PointNet, Point cloud, k3D, ShapeNet, Llama, 
-                OpenAI, TF-IDF, statistical techniques(Decision Tree, Segmentation, Logistic and Multiple Regression), EDA, 
-                ML, Deep-Learning, AI agent, Agentic AI, HuggingFace, MLOps, Streamlit, Git, LLM, Langchain, LangGraph, ML flow, 
-                Pytorch, RAG, Vector Database, Chain, OpenCV, Tensorflow, Scikit-learn, Docker, SSH, Prompt Engineering, MySQL, 
-                Tableau, MATLAB, MS Office, ChatGPT, Cursor.
-            </ul>
-          </div>
-          <div class="skill-card">
-            <h3>Mechanical &amp; Signal processing  Skillsets</h3>
-            <ul style="text-align: justify; text-justify: inter-word; margin: 0 0 12px 0;">
-                Fan, Light, Centrifugal Pump, Turbulent Flow, CFD, predictive analytics, FFT, CWT, Denoising of signals, Gas Turbine, Punch and Die Design, 
-                Product Design, Drafting, GD&T, BOM, Frequency analysis, Signal analysis, Mechanical pipe routing, Part Assembly, Sheet Metal, Surface Modelling, 
-                Solid modelling, PLM, Solidwork, UGNX10, CATIAv5, Creo2.0, AutoCAD, TeamCenter, OpenFoam, ParaView.
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience section -->
-    <section id="experience" class="section experience-section">
-      <div class="container">
-        <h2>Experience</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3>Senior AI/ML Engineer – Center of Research and Innovation (CRI) at Havells India Ltd.</h3>
-              <span class="date">Sept 2024 – Present</span>
-              <p><strong>Project 1: ML-Based CAD-to-CFD Pipeline</strong></p>
-              <ul style="text-align: justify; text-justify: inter-word; margin: 0 0 12px 0;">
-                <li>Built a fully automated CAD-to-CFD prediction pipeline, integrating preprocessing, inference, and visualization. Leveraging architectures like GNN, PointNet and Physics-Informed Neural Networks (PINNs) to model 3D fluid dynamics, Thermal analysis and Modal analysis.</li>
-                <li>Developed state of the art neural network architecture to predict the thermal distribution for Industrial LED light/semiconductor applications, reduces need of traditional CFD simulation. This AI meta model is to predict the junction temperature, Luminous flux, CCT, CRI etc. of LED so that along with thermal stability of the product light performance can be analysed.</li>
-                <li>Modified deep learning networks for mechanical applications; created meta-model for ceiling fan aerodynamics analysing flow velocities, pressure distribution, mass flowrate, and efficiency to optimize design and reduce product development iteration time.</li>
-                <li>Planned and built DOE-based pipeline: experiment matrix design for simulation data generation, solver data extraction, data analysis, preprocessing, AI model training/evaluation, and UI prototyping; deployed surrogate AI models into production environments with CI/CD, monitoring, drift detection, and scheduled retraining in collaboration with IT teams.</li>
-                <li>Collaborated with cross-functional product teams to identify CFD/CAE/Thermal pain points, scoped AI opportunities, defined data requirements, briefed on strategies/roadmaps, and presented implementation plans to stakeholders, accelerating AI adoption in manufacturing workflows.</li>
-              </ul>
-
-              <p><strong>Project 2: Agentic AI Solution for Automated CAD Generation</strong></p>
-              <ul style="text-align: justify; text-justify: inter-word; margin: 0 0 12px 0;">
-                <li>Developing an Agentic AI solution using opensource GenAI models likes TinyLlama, Qwen2.5, gpt-oss-20B to automate CAD model generation and validate it through CFD, thermal, and structural analysis with integration of tools like FreeCAD/Blender. Built RAG workflow that handle components like custom agentic KB, context aware, multi-LLM orchestration, supervisor, prompt engineering etc.</li>
-                <li>Designed conditional chains with MLP decision modules for simulation-informed CAD generation; built interactive frontend for query processing, visualization/download; deployed end-to-end pipeline on local server with DVC for datasets, MLflow/Langsmith logging, GitHub Actions/GitLab CI for CI/CD/testing/deployment/drift detection/retraining, and access controls for scalable collaboration.</li>
-              </ul>
-
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3>Graduate Apprenticeship Trainee (GAT) – Gas Turbine Research Establishment (DRDO)</h3>
-              <span class="date">Nov 2018 – Nov 2019</span>
-              <ul style="text-align: justify; text-justify: inter-word; margin: 0 0 12px 0;">
-                <li>Designed and optimized critical components for aircraft engines, demonstrating innovative and creative design in
-                centrifugal compressors, volute casings., bearing housing, low-pressure filter, lay shaft, gears, bobbin, split flange,
-                double eye flange, triangular flange/web, spacer, insert, elbow pipe, and over 300 parts for engine control systems.</li>
-                <li>Led the KAVERI, STFE, and GHATAK Engine projects, highlighting strong teamwork and professional conduct.
-                My adaptability and technical acumen were crucial in optimizing design, reducing project timelines by 17% while
-                maintaining ethical standards. My communicative skills were vital in coordinating with cross-functional teams,
-                ensuring seamless project execution and adherence to industry standards.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3>Design Engineer (GET) – ISOPARA Engineering Service</h3>
-              <span class="date">May 2018 – Nov 2018</span>
-              <ul style="text-align: justify; text-justify: inter-word; margin: 0 0 12px 0;">
-                <li>Build 3D model of dies, and punches for Injection Moulding machines, facilitating the production of diverse products such as TV setup boxes, bottles, chairs, plastic handles, and various small objects, resulting in improved manufacturing efficiency and employing attentive detail to enhance product quality by 20%.</li>
-                <li>Implemented Geometric Dimensioning and Tolerancing (GDT) principles to optimize design quality and manufacturability, resulting in a 28% reduction in production defects and a 15% increase in overall process efficiency.</li>
-              </ul>
-
+            <div class="col-lg-7 col-xl-7 order-2 order-lg-2 hero-media-column">
+              <div class="hero-image">
+                <div class="hero-media-shell">
+                  <div class="hero-display-heading">Projects</div>
+                  <div
+                    id="media-container"
+                    class="media-container"
+                    data-manifest="media/manifest.json"
+                    data-directory="media/"
+                  ></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Projects section -->
-    <section id="Projects" class="section projects-section">
-      <div class="container">
-        <h2>Research Work</h2>
+      <section id="about" class="about section">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-11">
+              <div class="intro-header text-center">
+                <h1>Hi, I'm Deepak Kumar</h1>
+                <p class="subtitle">
+                  Mechanical engineering roots, research depth, and production
+                  AI delivery across simulation, CAD, and agentic systems.
+                </p>
+              </div>
 
-        <div class="project-grid">
-          <div class="project-card">
-            <h3>Fault Diagnosis of Centrifugal Pump</h3>
-            <p style="text-align: justify; text-justify: inter-word; margin: 0 0 12px 0;">
-              System Dynamics Lab, IIT Indore (July, 2022 - June, 2024)
+              <div class="main-content-wrapper">
+                <div class="content-area">
+                  <div class="story-grid">
+                    <article class="story-point">
+                      <span class="story-label">Foundation</span>
+                      <h3>Mechanical design and manufacturability</h3>
+                      <p>
+                        Started in tooling and design, learning GD&amp;T,
+                        manufacturability, and delivery discipline in real
+                        industrial settings.
+                      </p>
+                    </article>
+                    <article class="story-point">
+                      <span class="story-label">Research</span>
+                      <h3>IIT Indore and fault-diagnosis work</h3>
+                      <p>
+                        Built deep-learning workflows for centrifugal pump
+                        blockage diagnosis and translated research into
+                        measurable model performance.
+                      </p>
+                    </article>
+                    <article class="story-point">
+                      <span class="story-label">Today</span>
+                      <h3>Industrial AI systems at scale</h3>
+                      <p>
+                        Building physics-aware and agentic AI systems that
+                        connect CAD, CFD/CAE, decision support, and automation.
+                      </p>
+                    </article>
+                  </div>
+
+                  <div class="row g-4 align-items-start about-body">
+                    <div class="col-lg-8">
+                      <div class="story-block">
+                        <p class="lead-text">
+                          I began as a mechanical engineer drawn to how
+                          machines behave in the real world, then expanded that
+                          curiosity into research and production AI.
+                        </p>
+
+                        <p>
+                          After completing my BE, I stepped into industry
+                          through tooling and design roles where precision,
+                          manufacturability, and dependable execution mattered
+                          every day. Later, at GTRE under DRDO, I worked around
+                          aircraft engine component design and optimization,
+                          which sharpened my approach to rigorous engineering,
+                          analysis, and cross-functional problem solving.
+                        </p>
+
+                        <p>
+                          That engineering exposure pushed me toward research at
+                          IIT Indore, where I pursued MS (Research) and worked
+                          on centrifugal pump blockage fault diagnosis. I built
+                          and tuned a modified InceptionV3 pipeline that
+                          achieved about 95% accuracy, while also growing
+                          through student leadership roles that strengthened my
+                          planning, communication, and execution.
+                        </p>
+
+                        <p>
+                          Freelancing later expanded my work into GenAI and
+                          agentic AI, including end-to-end audio intelligence
+                          systems for noisy Hinglish speech with signal
+                          processing, VAD, ASR, normalization, and diarization.
+                          Today, at CRI - Havells India Limited, I focus on
+                          physics-aware AI that connects CAD, CFD/CAE, and
+                          decision-making through GNNs, PointNet, PINNs,
+                          meta-models, and automation pipelines.
+                        </p>
+
+                        <p>
+                          A strong thread across my work is building complete
+                          systems, not just models: automation, tool use,
+                          validation, deployment, and real usability. That is
+                          why projects like conversational CAD generation fit my
+                          strengths well. I work comfortably across mechanical
+                          engineering, simulation, and AI, and I translate those
+                          domains into practical systems that teams can use.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                      <aside class="about-sidebar">
+                        <div class="about-focus">
+                          <h3>What I bring to teams</h3>
+                          <ul class="about-focus-list">
+                            <li>
+                              Interdisciplinary thinking across mechanical
+                              engineering, simulation, and AI/ML.
+                            </li>
+                            <li>
+                              Entrepreneurial thinking focused on complete
+                              solutions, not only models.
+                            </li>
+                            <li>
+                              Comfortable coordinating with design,
+                              simulation, AI, product, and IT teams.
+                            </li>
+                            <li>
+                              A delivery mindset that extends from research to
+                              automation, tooling, and deployment.
+                            </li>
+                            <li>
+                              Practical system design for industrial use cases,
+                              not only model experimentation.
+                            </li>
+                            <li>
+                              Ability to translate domain requirements into
+                              working AI systems that teams can actually use.
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="about-academics">
+                          <h3>Academic</h3>
+                          <div class="about-academic-table-wrap">
+                            <table class="about-academic-table">
+                              <colgroup>
+                                <col class="academic-col-degree" />
+                                <col class="academic-col-institute" />
+                                <col class="academic-col-score" />
+                                <col class="academic-col-year" />
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th>Degree</th>
+                                  <th>Institute</th>
+                                  <th>CGPA / %</th>
+                                  <th>Year</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>MS (R)</td>
+                                  <td>IIT Indore</td>
+                                  <td>7.81</td>
+                                  <td>2024</td>
+                                </tr>
+                                <tr>
+                                  <td>BE</td>
+                                  <td>Nagpur Univ.</td>
+                                  <td>7.8</td>
+                                  <td>2018</td>
+                                </tr>
+                                <tr>
+                                  <td>XII</td>
+                                  <td>BSEB Patna</td>
+                                  <td>66.2</td>
+                                  <td>2013</td>
+                                </tr>
+                                <tr>
+                                  <td>X</td>
+                                  <td>BSEB Patna</td>
+                                  <td>75.8</td>
+                                  <td>2011</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </aside>
+                    </div>
+                  </div>
+
+                  <div class="achievements-row about-achievements">
+                    <div class="achievement">
+                      <div class="achievement-icon">
+                        <i class="bi bi-buildings"></i>
+                      </div>
+                      <div class="achievement-content">
+                        <h4>Current Role</h4>
+                        <p>Senior Engineer - AI/ML at CRI, Havells India Ltd.</p>
+                      </div>
+                    </div>
+
+                    <div class="achievement">
+                      <div class="achievement-icon">
+                        <i class="bi bi-journal-check"></i>
+                      </div>
+                      <div class="achievement-content">
+                        <h4>Research Outcome</h4>
+                        <p>Modified InceptionV3 based Fault Diagnosis research publication in Advanced Engineering Informatics.</p>
+                      </div>
+                    </div>
+
+                    <div class="achievement">
+                      <div class="achievement-icon">
+                        <i class="bi bi-gear-wide-connected"></i>
+                      </div>
+                      <div class="achievement-content">
+                        <h4>Working Style</h4>
+                        <p>Builds full solutions across engineering, AI, deployment, and agentic automation.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="skills section">
+        <div class="container section-title">
+          <h2>Skills</h2>
+          <p>
+            Technical skills across AI/ML development, signal processing,
+            mechanical systems, and engineering workflows.
+          </p>
+        </div>
+
+        <div class="container">
+          <div class="skills-layout skills-layout--mosaic">
+            <div class="skills-mosaic">
+              <article class="skill-tile skill-tile--core">
+                <span class="skill-tile-label">Core AI/ML</span>
+                <h3>GenAI</h3>
+                <div class="skill-chip-row">
+                  <span>LLM</span>
+                  <span>AI Agents</span>
+                  <span>Agentic AI</span>
+                  <span>PyTorch</span>
+                  <span>TensorFlow</span>
+                  <span>OpenAI GPT-3.5 / o4-mini / GPT-5 Codex</span>
+                  <span>Gemini 2.5 Flash</span>
+                  <span>Qwen 2.5</span>
+                  <span>Claude Opus / Sonnet</span>
+                  <span>Llama</span>
+                  <span>Hugging Face</span>
+                  <span>LangChain</span>
+                  <span>LangGraph</span>
+                  <span>RAG</span>
+                  <span>Prompt Engineering</span>
+                  <span>Microsoft Foundry</span>
+                </div>
+              </article>
+
+              <article class="skill-tile skill-tile--nlp">
+                <span class="skill-tile-label">NLP Stack</span>
+                <h3>NLP</h3>
+                <div class="skill-chip-row">
+                  <span>One-hot Encoding</span>
+                  <span>TF-IDF / BoW / N-grams</span>
+                  <span>MLP/ANN</span>
+                  <span>NLP</span>
+                  <span>NLTK</span>
+                  <span>spaCy</span>
+                  <span>LSI / PLSI / LDA / PCA / ICA</span>
+                  <span>word2vec / GloVe / LexVec</span>
+                  <span>ELMo / BERT / DistilBERT / XLNet</span>
+                  <span>Doc2Vec / SBERT / USE / MUSE / XLM</span>
+                  <span>Node2Vec / DeepWalk / TransE / DistMult / ComplEx</span>
+                  <span>LSTM / RNN / GRU</span>
+                  <span>Transformer / Seq2Seq / VAE / MoE</span>
+                </div>
+              </article>
+
+              <article class="skill-tile skill-tile--viz">
+                <span class="skill-tile-label">Visualization</span>
+                <h3>Plots &amp; Dashboards</h3>
+                <div class="skill-chip-row">
+                  <span>Matplotlib</span>
+                  <span>Plotly</span>
+                  <span>Seaborn</span>
+                  <span>Tableau</span>
+                  <span>Streamlit</span>
+                </div>
+              </article>
+
+              <article class="skill-tile skill-tile--ml">
+                <span class="skill-tile-label">Data</span>
+                <h3>Deep Learning &amp; Applied ML</h3>
+                <div class="skill-chip-row">
+                  <span>EDA</span>
+                  <span>Scikit-learn</span>
+                  <span>Decision Trees</span>
+                  <span>Segmentation</span>
+                  <span>Logistic Regression</span>
+                  <span>Multiple Regression</span>
+                  <span>Predictive Analytics</span>
+                  <span>InceptionV3 / ResNet / VGG16 / EfficientNet</span>
+                  <span>PointNet</span>
+                  <span>PINNs</span>
+                  <span>OpenCV</span>
+                  <span>Point Cloud</span>
+                  <span>GNN/GINE</span>
+                  <span>ShapeNet</span>
+                  <span>k3D</span>
+                  <span>Python</span>
+                  <span>Pandas</span>
+                  <span>NumPy</span>
+                </div>
+              </article>
+
+              <article class="skill-tile skill-tile--design">
+                <span class="skill-tile-label">Mechanical</span>
+                <h3>Mechanical Design Foundations</h3>
+                <div class="skill-chip-row">
+                  <span>Punch and Die Design</span>
+                  <span>Product Design</span>
+                  <span>Drafting</span>
+                  <span>GD&amp;T</span>
+                  <span>BOM</span>
+                  <span>Part Assembly</span>
+                  <span>Sheet Metal</span>
+                  <span>Mechanical Pipe Routing</span>
+                  <span>Surface Modelling</span>
+                  <span>Solid Modelling</span>
+                  <span>UGNX10/SolidWorks/CATIAV5/Crea2.0/AutoCAD</span>
+                  <span>TeamCenter</span>
+                  <span>PLM</span>
+                  <span>CFD/StarCCM+/OpenFOAM</span>
+                  <span>ParaView</span>
+                </div>
+              </article>
+
+              <article class="skill-tile skill-tile--simulation">
+                <span class="skill-tile-label">Simulation</span>
+                <h3>Domains</h3>
+                <div class="skill-chip-row">
+                  <span>Fan</span>
+                  <span>Light</span>
+                  <span>Centrifugal Pump</span>
+                  <span>Turbulent Flow</span>
+                  <span>Gas Turbine</span>
+                  <span>FFT</span>
+                  <span>CWT</span>
+                  <span>Frequency Analysis</span>
+                  <span>Statistical Analysis</span>
+                  <span>Signal Analysis</span>
+                  <span>Denoising</span>
+                  <span>Predictive Analytics</span>
+                </div>
+              </article>
+
+              <article class="skill-tile skill-tile--platform">
+                <span class="skill-tile-label">Platform</span>
+                <h3>Deployment &amp; Tooling</h3>
+                <div class="skill-chip-row">
+                  <span>Vector DBs: ChromaDB / Pinecone / FAISS / Weaviate / Qdrant</span>
+                  <span>MLOps</span>
+                  <span>MLflow</span>
+                  <span>Docker</span>
+                  <span>FastAPI / MCP / REST API / Postgres</span>
+                  <span>Azure / AWS</span>
+                  <span>Git</span>
+                  <span>SSH</span>
+                  <span>MySQL</span>
+                  <span>MATLAB</span>
+                  <span>MS Office</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="resume section">
+        <div class="container section-title">
+          <h2>Experience</h2>
+          <p>
+            Professional journey across industrial AI, research, aircraft
+            engine work, and mechanical design engineering.
+          </p>
+        </div>
+
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-11">
+              <div class="professional-journey">
+                <div class="experience-timeline">
+                  <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                      <div class="position-meta">
+                        <span class="timeline-year">2024 - Present</span>
+                      </div>
+                      <h3>Senior Engineer - AI/ML</h3>
+                      <h4>Center of Research and Innovation (CRI) at Havells India Ltd.</h4>
+                      <p class="project-subheading">
+                        <strong>Project 1: ML-Based CAD-to-CFD Pipeline</strong>
+                      </p>
+                      <ul class="experience-list">
+                        <li>
+                          Built a fully automated CAD-to-CFD prediction
+                          pipeline, integrating preprocessing, inference, and
+                          visualization. Leveraging architectures like GNN,
+                          PointNet and Physics-Informed Neural Networks (PINNs)
+                          to model 3D fluid dynamics, thermal analysis and modal
+                          analysis.
+                        </li>
+                        <li>
+                          Developed state of the art neural network
+                          architecture to predict the thermal distribution for
+                          industrial LED light and semiconductor applications,
+                          reducing the need of traditional CFD simulation. This
+                          AI meta model predicts junction temperature, luminous
+                          flux, CCT, CRI and related outputs.
+                        </li>
+                        <li>
+                          Modified deep learning networks for mechanical
+                          applications; created meta-model for ceiling fan
+                          aerodynamics analysing flow velocities, pressure
+                          distribution, mass flowrate, and efficiency to
+                          optimize design and reduce product development
+                          iteration time.
+                        </li>
+                        <li>
+                          Planned and built DOE-based pipeline: experiment
+                          matrix design for simulation data generation, solver
+                          data extraction, data analysis, preprocessing, AI
+                          model training and evaluation, UI prototyping, CI/CD,
+                          monitoring, drift detection, and scheduled retraining.
+                        </li>
+                        <li>
+                          Collaborated with cross-functional product teams to
+                          identify CFD, CAE and thermal pain points, scope AI
+                          opportunities, define data requirements, and present
+                          implementation plans to stakeholders.
+                        </li>
+                      </ul>
+                      <p class="project-subheading">
+                        <strong>Project 2: Agentic AI Solution for Automated CAD Generation</strong>
+                      </p>
+                      <ul class="experience-list">
+                        <li>
+                          Developing an Agentic AI solution using open-source
+                          GenAI models like TinyLlama, Qwen2.5, and gpt-oss-20B
+                          to automate CAD model generation and validate it
+                          through CFD, thermal, and structural analysis with
+                          integration of tools like FreeCAD and Blender.
+                        </li>
+                        <li>
+                          Built RAG workflow components including custom
+                          agentic KB, context awareness, multi-LLM
+                          orchestration, supervisor logic, prompt engineering,
+                          logging, and interactive frontend support.
+                        </li>
+                        <li>
+                          Designed conditional chains with MLP decision modules
+                          for simulation-informed CAD generation; deployed the
+                          end-to-end pipeline with DVC, MLflow, Langsmith,
+                          GitHub Actions or GitLab CI, and access controls for
+                          scalable collaboration.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                      <div class="position-meta">
+                        <span class="timeline-year">2022 - 2024</span>
+                      </div>
+                      <h3>MS (Research) - IIT Indore</h3>
+                      <h4>System Dynamics Lab</h4>
+                      <ul class="experience-list">
+                        <li>
+                          Focused on centrifugal pump blockage fault diagnosis,
+                          deep learning, time-frequency analysis, and predictive
+                          analytics for industrial maintenance.
+                        </li>
+                        <li>
+                          Modified InceptionV3 and achieved around 95% accuracy
+                          on pump blockage classification across 35 operating
+                          conditions.
+                        </li>
+                        <li>
+                          Combined experimentation, signal processing, model
+                          tuning, and practical engineering interpretation into
+                          a research workflow that later translated into a
+                          publication.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                      <div class="position-meta">
+                        <span class="timeline-year">2018 - 2019</span>
+                      </div>
+                      <h3>Graduate Apprenticeship Trainee (GAT)</h3>
+                      <h4>Gas Turbine Research Establishment (DRDO)</h4>
+                      <ul class="experience-list">
+                        <li>
+                          Designed and optimized critical components for
+                          aircraft engines, including centrifugal compressors,
+                          volute casings, bearing housing, low-pressure filter,
+                          lay shaft, gears, flanges, spacer, insert, elbow
+                          pipe, and over 300 parts for engine control systems.
+                        </li>
+                        <li>
+                          Contributed to KAVERI, STFE, and GHATAK engine
+                          projects, reducing project timelines by 17% through
+                          design optimization, teamwork, and strong
+                          cross-functional coordination.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                      <div class="position-meta">
+                        <span class="timeline-year">2018</span>
+                      </div>
+                      <h3>Design Engineer (GET)</h3>
+                      <h4>ISOPARA Engineering Service</h4>
+                      <ul class="experience-list">
+                        <li>
+                          Built 3D models of dies and punches for injection
+                          moulding machines supporting products like TV setup
+                          boxes, bottles, chairs, plastic handles, and other
+                          small objects, improving manufacturing efficiency and
+                          product quality.
+                        </li>
+                        <li>
+                          Implemented Geometric Dimensioning and Tolerancing
+                          (GD&amp;T) principles to optimize design quality and
+                          manufacturability, reducing production defects by 28%
+                          and improving process efficiency by 15%.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="research" class="portfolio section">
+        <div class="container section-title">
+          <h2>Research Work</h2>
+          <p>
+            Research on reliable, data-driven condition monitoring and fault
+            diagnosis for centrifugal pumps under blockage-related faults.
+          </p>
+        </div>
+
+        <div class="container">
+          <div class="research-stack">
+            <div class="research-paper-layer" aria-hidden="true">
+              <div class="research-paper-frame">
+                <img
+                  src="illustration3.jpg?v=20260328-074126"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <div class="research-card">
+              <div class="research-content">
+                <div class="portfolio-meta">
+                  <span class="portfolio-category">System Dynamics Lab, IIT Indore</span>
+                  <span class="portfolio-year">July 2022 - June 2024</span>
+                </div>
+                <h3 class="portfolio-title">Fault Diagnosis of Centrifugal Pump</h3>
+                <p class="portfolio-description">
+                  My research, carried out on the suggestion of BARC, focuses on
+                  developing a reliable, data-driven condition monitoring and
+                  fault diagnosis framework for centrifugal pumps under
+                  blockage-related operating faults.
+                </p>
+                <p class="portfolio-description">
+                  I created controlled experimental conditions to reproduce
+                  suction blockage, discharge blockage, and their combined cases
+                  at multiple severity levels, captured high-resolution sensor
+                  data, and transformed these signals into meaningful diagnostic
+                  patterns using advanced time-frequency analysis. Building on
+                  this experimental foundation, I implemented and improved
+                  deep-learning models, particularly a modified InceptionV3-based
+                  approach, to accurately classify pump health and fault severity,
+                  with the goal of enabling practical, industry-ready predictive
+                  maintenance for critical pumping systems.
+                </p>
+
+                <ul class="research-points">
+                  <li>
+                    <strong>Test rig preparation and instrumentation:</strong>
+                    Designed and assembled a controlled experimental setup
+                    measuring suction pressure, discharge pressure, and flow rate,
+                    integrated with HYDAC DAQ (HMG 4000) for reliable high-speed
+                    acquisition.
+                  </li>
+                  <li>
+                    <strong>DOE matrix formation:</strong> Built a structured
+                    design of experiments covering 35 pump conditions: Healthy
+                    (1), SB (6 levels), DB (4 levels), and SDB (24 combinations).
+                  </li>
+                  <li>
+                    <strong>Controlled fault simulation and repeatability:</strong>
+                    Implemented blockage severities using butterfly-valve notch
+                    angles mapped to blocked-flow-area percentage and enforced a
+                    steady-state window before logging.
+                  </li>
+                  <li>
+                    <strong>High-quality data acquisition strategy:</strong>
+                    Recorded sensor signals at 10 kHz for 60 seconds per
+                    condition to preserve fault-related frequency content.
+                  </li>
+                  <li>
+                    <strong>Signal processing and fault-signature analysis:</strong>
+                    Applied Continuous Wavelet Transform (CWT) using a Morse
+                    wavelet to capture non-stationary time-frequency fault
+                    patterns and interpret pump dynamics.
+                  </li>
+                  <li>
+                    <strong>Feature and signal selection:</strong> Compared sensor
+                    behavior through CWT and established suction pressure as the
+                    most discriminative signal for blockage diagnosis.
+                  </li>
+                  <li>
+                    <strong>Data preprocessing pipeline:</strong> Built a
+                    learning-ready dataset with stratified split (70:15:15) and
+                    meaningful augmentation to improve generalization.
+                  </li>
+                  <li>
+                    <strong>Baseline model:</strong> Implemented transfer-learning
+                    using InceptionV3 and achieved balanced baseline performance
+                    on unseen test data at about 81.82% accuracy.
+                  </li>
+                  <li>
+                    <strong>Modified InceptionV3 and tuning:</strong> Integrated
+                    ELU with ReLU, optimized dropout, and tuned via Hyperband to
+                    achieve about 95.36% test accuracy with strong precision,
+                    recall, and F1.
+                  </li>
+                </ul>
+
+                <div class="research-links">
+                  <a
+                    href="InceptionV3 based blockage fault diagnosis of centrifugal pump.pdf"
+                    class="btn-primary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Publication
+                  </a>
+                  <a
+                    href="https://github.com/Deepak0kushwaha/MS-Thesis"
+                    class="btn-secondary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Repository
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="services section">
+        <div class="container section-title">
+          <h2>Other Projects</h2>
+          <p>
+            Selected freelance and product builds across finance, education,
+            RAG, CAD, audio intelligence, and creator tooling.
+          </p>
+        </div>
+
+        <div class="container">
+          <div class="projects-stack-shell">
+            <div class="projects-stack-toolbar">
+              <div class="projects-stack-controls">
+                <span id="project-stack-status" class="project-stack-status"></span>
+                <div class="project-stack-button-row">
+                  <button
+                    type="button"
+                    class="project-stack-btn"
+                    data-project-stack="prev"
+                  >
+                    Prev
+                  </button>
+                  <button
+                    type="button"
+                    class="project-stack-btn"
+                    data-project-stack="next"
+                  >
+                    Next
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              id="project-stack-tabs"
+              class="project-stack-tabs"
+              aria-label="Project selector"
+            ></div>
+
+            <div id="projects-stack-deck" class="projects-grid project-stack-deck">
+            <div class="col-lg-6">
+              <div class="project-detail-card">
+                <div class="project-card-top">
+                  <div class="project-card-copy">
+                    <h3>Crypto Paper Trading Web Platform</h3>
+                    <p><strong>Summary:</strong> PaperTrading Platform is a full-stack crypto spot paper-trading web app that lets users practice live market trading with virtual money using real-time Binance market data, advanced trading views, and portfolio tracking.</p>
+                    <div class="project-link-row">
+                      <a
+                        href="https://papertrading-web.wonderfulriver-37d859e5.centralindia.azurecontainerapps.io/terminal"
+                        class="read-more"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <span>Access Webapp</span>
+                        <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="project-media-frame">
+                    <video
+                      src="media/papertrading_upl.mp4"
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                      preload="metadata"
+                      aria-label="Demo video for Crypto Paper Trading Web Platform"
+                    ></video>
+                  </div>
+                </div>
+                <p><strong>Technical Approach / Stack:</strong></p>
+                <ul class="project-detail-list">
+                  <li>Built as a monorepo with Next.js 15 frontend, Fastify API, PostgreSQL, Prisma, and deployable Azure Container Apps infrastructure.</li>
+                  <li>Integrated Binance public market data for live charts, order book, trades, sentiment feeds, watchlist, footprint chart, drawing tools, and indicators.</li>
+                  <li>Implemented paper trading workflows including wallet bootstrap, order placement, position management, trade history, portfolio tracking, and secure authentication.</li>
+                  <li>Added admin and telemetry capabilities such as login activity monitoring, visitor analytics, live visitor counts, manual email approval, and operational dashboards.</li>
+                  <li>Designed for production deployment on Azure with web, API, worker, PostgreSQL, migration jobs, and email services.</li>
+                </ul>
+                <p class="project-impact"><strong>Impact:</strong> Built a production-style paper trading ecosystem that simulates real crypto trading environments for learning and strategy practice.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="project-detail-card">
+                <div class="project-card-top">
+                  <div class="project-card-copy">
+                    <h3>AI Powered Book to Quiz Generative Webapp</h3>
+                    <p><strong>Summary:</strong> Book2Quiz is a browser-only React/Vite app that turns PDF textbooks into study questions and lets users practice or take timed tests.</p>
+                    <div class="project-link-row">
+                      <a
+                        href="https://deepak0kushwaha.github.io/Book2Quiz/"
+                        class="read-more"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <span>Access Webapp</span>
+                        <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="project-media-frame">
+                    <video
+                      src="media/b2q.mp4"
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                      preload="metadata"
+                      aria-label="Demo video for AI Powered Book to Quiz Generative Webapp"
+                    ></video>
+                  </div>
+                </div>
+                <p><strong>Technical Approach / Stack:</strong></p>
+                <ul class="project-detail-list">
+                  <li>React + Vite + Base Web/Styletron, with PDF handling and AI calls running in the browser.</li>
+                  <li>`pdfjs-dist` loads PDFs and extracts text; sparse pages are rendered to canvas and processed with OCR using `tesseract.js`.</li>
+                  <li>Assembles prompts from user settings and extracted text, calls Gemini via fetch, expects JSON, strips fences, parses with `jsonrepair` fallback, and validates counts.</li>
+                  <li>Supports Study and Test modes with timers, scoring, retry, reset, regenerate, and MCQ or short-answer handling.</li>
+                </ul>
+                <p class="project-impact"><strong>Impact:</strong> Reduced traditional frontend development time by leveraging AI tooling, delivering a polished learning web experience with minimal boilerplate.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="project-detail-card">
+                <div class="project-card-top">
+                  <div class="project-card-copy">
+                    <h3>Retrieval Augmented Generation Based Question Answering System</h3>
+                    <p><strong>Summary:</strong> Developed a semantic retrieval and generative reasoning platform that ingests heterogeneous documents, correlates information, and answers user queries with context-aware summaries using RAG techniques.</p>
+                    <div class="project-link-row">
+                      <a
+                        href="https://github.com/Deepak0kushwaha/rag_qa_system"
+                        class="read-more"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <span>GitHub Repository</span>
+                        <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="project-media-frame">
+                    <img
+                      src="media/RAGQA.png"
+                      loading="lazy"
+                      decoding="async"
+                      alt="Preview of Retrieval Augmented Generation Based Question Answering System"
+                    />
+                  </div>
+                </div>
+                <p><strong>Technical Approach / Stack:</strong></p>
+                <ul class="project-detail-list">
+                  <li>Large language models such as open-source Llama-70B as the generative core.</li>
+                  <li>ChromaDB for vector embedding storage and similarity search.</li>
+                  <li>Custom document ingestion, chunking, and embedding pipelines.</li>
+                  <li>Retrieval logic to fetch relevant context followed by prompt assembly for the generator.</li>
+                  <li>Answer refinement and attribution layers to improve factuality.</li>
+                </ul>
+                <p class="project-impact"><strong>Impact:</strong> Delivered a knowledge assistant capable of synthesizing cross-document insights and accelerating research synthesis and decision support.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="project-detail-card">
+                <div class="project-card-top">
+                  <div class="project-card-copy">
+                    <h3>Agentic LLM Integration in Blender for Industrial-Grade CAD Generation</h3>
+                    <p><strong>Summary:</strong> Extended Blender with an agentic, retrieval-augmented LLM interface to translate natural language prompts into parametrically generated, industrial-grade CAD models with iterative refinement.</p>
+                    <div class="project-link-row">
+                      <a
+                        href="https://github.com/Deepak0kushwaha/blender_agentic_cad"
+                        class="read-more"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <span>GitHub Repository</span>
+                        <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="project-media-frame">
+                    <video
+                      src="media/blenderllm3.mp4"
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                      preload="metadata"
+                      aria-label="Demo video for Agentic LLM Integration in Blender for Industrial-Grade CAD Generation"
+                    ></video>
+                  </div>
+                </div>
+                <p><strong>Technical Approach / Stack:</strong></p>
+                <ul class="project-detail-list">
+                  <li>LLM backend such as ChatGPT-4o-mini or comparable models orchestrated via agentic pipelines.</li>
+                  <li>Retrieval agents fetch relevant API, docs, and context; a RAG prompt constructor and execution agent generate Blender Python scripts.</li>
+                  <li>Prompt engineering for precise geometry specification and adaptive iteration.</li>
+                  <li>Blender Python addon customization for real-time model generation and feedback loop.</li>
+                </ul>
+                <p class="project-impact"><strong>Impact:</strong> Enabled non-expert engineers and designers to generate and evolve CAD models through conversational interfaces, reducing early-stage design friction.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="project-detail-card">
+                <div class="project-card-top">
+                  <div class="project-card-copy">
+                    <h3>Multilingual Speaker Intelligence System</h3>
+                    <p><strong>Summary:</strong> Built an end-to-end multilingual audio intelligence pipeline that identifies and verifies speakers, segments conversations, transcribes speech, and translates across languages and dialects for noisy real-world environments.</p>
+                    <div class="project-link-row">
+                      <a
+                        href="https://github.com/Deepak0kushwaha/speaker_ai"
+                        class="read-more"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <span>GitHub Repository</span>
+                        <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="project-media-frame">
+                    <img
+                      src="media/speakerdia.png"
+                      loading="lazy"
+                      decoding="async"
+                      alt="Preview of Multilingual Speaker Intelligence System"
+                    />
+                  </div>
+                </div>
+                <p><strong>Technical Approach / Stack:</strong></p>
+                <ul class="project-detail-list">
+                  <li>Signal processing for harmonic extraction, overlap detection, and noise profiling.</li>
+                  <li>Voice Activity Detection (VAD) to isolate speech segments.</li>
+                  <li>WhisperX or equivalent for high-fidelity speech-to-text transcription.</li>
+                  <li>Diarization using `pyannote`, speaker verification logic, and REST API backend delivering transcripts, labels, timestamps, and translations.</li>
+                </ul>
+                <p class="project-impact"><strong>Impact:</strong> Enabled scalable extraction of actionable communication data from large noisy audio corpora while reducing manual review overhead.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="project-detail-card">
+                <div class="project-card-top">
+                  <div class="project-card-copy">
+                    <h3>Cross-Platform Task Management App (Flutter)</h3>
+                    <p><strong>Summary:</strong> Developed a lightweight, cross-platform ToDo application to help users organize and track tasks.</p>
+                    <div class="project-link-row">
+                      <a
+                        href="https://github.com/Deepak0kushwaha/flutter_task_manager"
+                        class="read-more"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <span>GitHub Repository</span>
+                        <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="project-media-frame">
+                    <img
+                      src="media/flutter.png"
+                      loading="lazy"
+                      decoding="async"
+                      alt="Preview of Cross-Platform Task Management App"
+                    />
+                  </div>
+                </div>
+                <p><strong>Technical Approach / Stack:</strong></p>
+                <ul class="project-detail-list">
+                  <li>Flutter for cross-platform mobile and desktop UI.</li>
+                  <li>Local storage such as SQLite or shared preferences for task persistence.</li>
+                  <li>Reactive state management for dynamic updates.</li>
+                </ul>
+                <p class="project-impact"><strong>Impact:</strong> Provided users with a responsive, portable productivity tool tailored for personal workflow management.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="project-detail-card">
+                <div class="project-card-top">
+                  <div class="project-card-copy">
+                    <h3>Agentic AI for Financial Modeling and Stock Market Analysis</h3>
+                    <p><strong>Summary:</strong> Built an intelligent agent framework to automate financial data ingestion, modeling, and insight generation for stock market analysis.</p>
+                    <div class="project-link-row">
+                      <a
+                        href="https://github.com/Deepak0kushwaha/agentic_financial_modeling"
+                        class="read-more"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <span>GitHub Repository</span>
+                        <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="project-media-frame">
+                    <video
+                      src="media/papertrading_upl.mp4"
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                      preload="metadata"
+                      aria-label="Demo video for Agentic AI for Financial Modeling and Stock Market Analysis"
+                    ></video>
+                  </div>
+                </div>
+                <p><strong>Technical Approach / Stack:</strong></p>
+                <ul class="project-detail-list">
+                  <li>Data pipelines for market data collection and normalization.</li>
+                  <li>Predictive modeling using time-series architectures such as LSTM and transformers.</li>
+                  <li>Agentic orchestration to trigger analyses, generate narrative summaries, and surface anomalies and trends.</li>
+                  <li>Integration of domain heuristics with learned models for hybrid insight.</li>
+                </ul>
+                <p class="project-impact"><strong>Impact:</strong> Enabled semi-autonomous monitoring and early-warning signals for financial decision-making, reducing manual analysis latency.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="project-detail-card">
+                <div class="project-card-top">
+                  <div class="project-card-copy">
+                    <h3>Creator Agent</h3>
+                    <p><strong>Summary:</strong> Created an AI assistant that supplies writers and bloggers with contextual content drafts and corresponding visual assets on demand.</p>
+                    <div class="project-link-row">
+                      <a
+                        href="https://github.com/Deepak0kushwaha/content_image_ai_agent"
+                        class="read-more"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <span>GitHub Repository</span>
+                        <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="project-media-frame">
+                    <img
+                      src="media/contentcreatorAI.png"
+                      loading="lazy"
+                      decoding="async"
+                      alt="Preview of Creator Agent"
+                    />
+                  </div>
+                </div>
+                <p><strong>Technical Approach / Stack:</strong></p>
+                <ul class="project-detail-list">
+                  <li>LLMs for content generation including titles, body copy, and SEO-aware summaries.</li>
+                  <li>Image generation or retrieval layers via prompt-to-image or curated asset pipelines.</li>
+                  <li>Context conditioning based on topic, audience, and tone.</li>
+                  <li>Lightweight UI or API endpoint to serve content creators in real time.</li>
+                </ul>
+                <p class="project-impact"><strong>Impact:</strong> Streamlined content production, enabling faster publishing cycles with consistent quality and reduced ideation friction.</p>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="publications" class="stats section light-background">
+        <div class="container section-title">
+          <h2>Publications</h2>
+        </div>
+
+        <div class="container">
+          <div class="publication-viewer-shell">
+            <div class="publication-viewer-toolbar">
+              <span id="publication-pdf-status" class="publication-viewer-status">
+                Loading paper...
+              </span>
+              <div class="publication-viewer-button-row">
+                <button
+                  type="button"
+                  id="publication-pdf-zoom-out"
+                  class="publication-viewer-btn"
+                >
+                  Zoom -
+                </button>
+                <button
+                  type="button"
+                  id="publication-pdf-zoom-reset"
+                  class="publication-viewer-btn"
+                >
+                  100%
+                </button>
+                <button
+                  type="button"
+                  id="publication-pdf-zoom-in"
+                  class="publication-viewer-btn"
+                >
+                  Zoom +
+                </button>
+                <button
+                  type="button"
+                  id="publication-pdf-prev"
+                  class="publication-viewer-btn"
+                >
+                  Prev
+                </button>
+                <button
+                  type="button"
+                  id="publication-pdf-next"
+                  class="publication-viewer-btn"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+
+            <div class="publication-pdf-stage" tabindex="0" aria-label="Research paper viewer">
+              <canvas
+                id="publication-pdf-canvas"
+                class="publication-pdf-canvas"
+              ></canvas>
+              <p id="publication-pdf-note" class="publication-viewer-note">
+                Rendering PDF...
+              </p>
+            </div>
+          </div>
+          <div class="publication-mobile-link">
+            <a
+              href="InceptionV3 based blockage fault diagnosis of centrifugal pump.pdf"
+              class="btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-file-earmark-pdf" style="margin-right:8px"></i>
+              Open Publication PDF
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact section">
+        <div class="container">
+          <div class="contact-cta">
+            <div class="contact-cta-glow"></div>
+            <span class="contact-cta-kicker">Get In Touch</span>
+            <h2 class="contact-cta-heading">Let's build <em>something</em></h2>
+            <p class="contact-cta-sub">
+              Open to AI/ML engineering roles, research collaboration, and
+              interdisciplinary engineering work across agentic systems,
+              simulation workflows, and industrial intelligence.
             </p>
-
-            <ul style="text-align: justify; text-justify: inter-word; margin: 0 0 12px 0;">
-              My research, carried out on the suggestion of BARC, focuses on developing a reliable, 
-              data-driven condition monitoring and fault diagnosis framework for centrifugal pumps under blockage-related operating faults.
-               I created controlled experimental conditions to reproduce suction blockage, discharge blockage, and their combined cases at multiple 
-               severity levels, captured high-resolution sensor data, and transformed these signals into meaningful diagnostic patterns using advanced
-                time–frequency analysis. Building on this experimental foundation, I implemented and improved deep-learning models—particularly a modified 
-                InceptionV3-based approach—to accurately classify pump health and fault severity, with the goal of enabling practical, industry-ready predictive 
-                maintenance for critical pumping systems.
-            </ul>
-
-            <ul style="text-align: justify; text-justify: inter-word; margin: 0 0 12px 0;">
-              <li><b>Test rig preparation & instrumentation:</b> Designed and assembled a controlled experimental setup measuring suction pressure, discharge pressure, and flow rate, integrated with HYDAC DAQ (HMG 4000) for reliable high-speed acquisition.</li>
-
-              <li><b>DOE matrix formation (fault × severity × operating conditions):</b> Built a structured Design of Experiments covering 35 pump conditions — Healthy (1), SB (6 levels), DB (4 levels), and SDB (24 combinations).</li>
-
-              <li><b>Controlled fault simulation & repeatability:</b> Implemented blockage severities using butterfly-valve notch angles mapped to blocked-flow-area %, and enforced a steady-state window before logging to ensure consistent, repeatable trials.</li>
-
-              <li><b>High-quality data acquisition strategy:</b> Recorded sensor signals at 10 kHz for 60 seconds per condition to preserve fault-related frequency content and ensure fidelity for time–frequency analysis.</li>
-
-              <li><b>Signal processing & fault-signature analysis:</b> Applied Continuous Wavelet Transform (CWT) using a Morse wavelet (b=3, ω₀=60) to capture non-stationary time–frequency fault patterns and interpret pump dynamics (rotational harmonics, blade passing effects, etc.).</li>
-
-              <li><b>Feature/signal selection based on analysis:</b> Compared sensor behavior through CWT and established suction pressure as the most discriminative signal for blockage diagnosis versus discharge pressure/flow (higher separation, lower ambiguity).</li>
-
-              <li><b>Data preprocessing pipeline for deep learning:</b> Built a learning-ready dataset with stratified split (70:15:15) and scale (~11,725 train / 2,520 val / 2,520 test; 72 samples/class × 35 classes), along with meaningful augmentation (rotation/shift/shear/zoom/flip) to improve generalization.</li>
-
-              <li><b>ML/DL implementation (baseline model):</b> Implemented transfer-learning using InceptionV3 and achieved balanced baseline performance on unseen test data (~81.82% accuracy, precision/recall ~81.7–81.8%).</li>
-
-              <li><b>Modified InceptionV3 + tuning (final results & deployment intent):</b> Improved architecture of InceptionV3 CNN model to make it more expressive 
-                by integrating a parallel network with ELU along with existing ReLU activation network & optimized dropout, tuned via Hyperband (dropout1=0.3, dropout2=0.3, lr=1e-2, batch=16, factor=0.2, patience=5), 
-                achieving ~95.36% test accuracy (Precision 95.48%, Recall 95.36%, F1 95.42%) — supporting industry-ready predictive maintenance.</li>
-            </ul>
+            <div class="contact-items-grid">
+              <a href="tel:+919309754609" class="contact-item-card">
+                <span class="contact-item-icon"><i class="bi bi-telephone-fill"></i></span>
+                <span class="contact-item-label">Phone</span>
+                <span class="contact-item-value">+91 9309754609</span>
+              </a>
+              <a href="mailto:dkushwaha6793@gmail.com" class="contact-item-card">
+                <span class="contact-item-icon"><i class="bi bi-envelope-fill"></i></span>
+                <span class="contact-item-label">Email</span>
+                <span class="contact-item-value">dkushwaha6793@gmail.com</span>
+              </a>
+              <a href="https://linkedin.com/in/iitiandeepak-kumar" target="_blank" rel="noopener noreferrer" class="contact-item-card">
+                <span class="contact-item-icon"><i class="bi bi-linkedin"></i></span>
+                <span class="contact-item-label">LinkedIn</span>
+                <span class="contact-item-value">iitiandeepak-kumar</span>
+              </a>
+              <a href="https://github.com/Deepak0kushwaha" target="_blank" rel="noopener noreferrer" class="contact-item-card">
+                <span class="contact-item-icon"><i class="bi bi-github"></i></span>
+                <span class="contact-item-label">GitHub</span>
+                <span class="contact-item-value">Deepak0kushwaha</span>
+              </a>
+              <a href="https://orcid.org/0009-0000-4333-3938" target="_blank" rel="noopener noreferrer" class="contact-item-card">
+                <span class="contact-item-icon"><i class="bi bi-journal-richtext"></i></span>
+                <span class="contact-item-label">ORCID</span>
+                <span class="contact-item-value">0009-0000-4333-3938</span>
+              </a>
+            </div>
           </div>
         </div>
+      </section>
+    </main>
 
-      </div>
-    </section>
-
-    <!-- Freelance Projects section -->
-    <section id="freelance" class="section freelance-section">
+    <footer id="footer" class="footer light-background">
       <div class="container">
-        <h2>Other Projects</h2>
-        <!-- Each freelance project is presented in its own card.  The
-             descriptions include a summary, role, technical stack and
-             impact for clarity.  -->
-        <div class="freelance-list">
-
-          <!-- Project 0.1 -->
-          <div class="freelance-card">
-            <h3>Crypto paper trading web platform</h3>
-            <p><strong>Summary:</strong> PaperTrading Platform is a full-stack crypto spot paper-trading web app that lets users practice live market trading with virtual money using real-time Binance market data, advanced trading views, and portfolio tracking.</p>
-            <p><a href="https://papertrading-web.wonderfulriver-37d859e5.centralindia.azurecontainerapps.io/terminal" class="btn secondary"><strong>Click here to Access Webapp</strong></a></p>
-            <p><strong>Technical Approach / Stack:</strong></p>
-            <ul style="text-align: justify; text-justify: inter-word; margin: 0 0 12px 0;">
-              <li>Built as a monorepo with <strong>Next.js 15</strong> frontend, <strong>Fastify API</strong>, <strong>PostgreSQL</strong>, <strong>Prisma</strong>, and deployable <strong>Azure Container Apps</strong> infrastructure.</li>
-              <li>Integrated <strong>Binance public market data</strong> for live charts, order book, trades, sentiment feeds, and trading-terminal experiences including watchlist, footprint chart, drawing tools, and indicators.</li>
-              <li>Implemented complete <strong>paper trading workflows</strong> including wallet bootstrap/reload, paper order placement, position management, trade history, portfolio-wide tracking, and secure user authentication with email verification and JWT-based sessions.</li>
-              <li>Added <strong>admin and telemetry capabilities</strong> such as login activity monitoring, visitor analytics, live visitor counts, manual email approval, and operational dashboards for platform control and user management.</li>
-              <li>Designed for production deployment on <strong>Azure</strong> with web, API, worker, PostgreSQL, migration jobs, and email services, enabling a scalable and cloud-ready architecture.</li>
-            </ul>
-            <p><strong>Impact:</strong> Built a production-style paper trading ecosystem that simulates real crypto trading environments for learning and strategy practice, while demonstrating strong capability in full-stack architecture, cloud deployment, trading product design, and real-time financial data integration.</p>
+        <div class="container">
+          <div class="copyright">
+            <span>Copyright</span>
+            <strong class="px-1 sitename">Deepak Kumar</strong>
+            <span>All Rights Reserved</span>
           </div>
-
-          <!-- Project 1 -->
-          <div class="freelance-card">
-            <h3>AI powered book to quiz generative webapp</h3>
-            <p><strong>Summary:</strong> Book2Quiz is a browser-only React/Vite app that turns PDF textbooks into study questions and lets users practice or take timed tests.</p>
-            <p><a href = "https://deepak0kushwaha.github.io/Book2Quiz/" class="btn secondary"> <strong> Click here to Access Webapp</strong></a></p>
-            <p><strong>Technical Approach / Stack:</strong></p>
-            <ul style="text-align: justify; text-justify: inter-word; margin: 0 0 12px 0;">
-              <li> React + Vite + Base Web/Styletron, PDF handling and AI calls run in the browser.</li>
-              <li> pdfjs-dist loads PDFs and extracts text; if a page is sparse, render to canvas and run tesseract.js OCR with language hints (Hindi/English/Bilingual).</li>
-              <li> Assemble a prompt from user settings (pages, difficulty, type, count, language) and extracted text; call Gemini via fetch (model from VITE_GEMINI_*), expect JSON, strip code fences, JSON.parse with jsonrepair fallback, validate counts.</li>
-              <li> Study/Test modes with timers, submit/score, retry (shuffled options), reset/regenerate. MCQ/short-answer handling is controlled by parent state; options numbered for clarity.</li>
-            </ul>
-            <p><strong>Impact:</strong> Reduced traditional front‑end development time by leveraging AI tooling, delivering polished web experiences with minimal boilerplate.</p>
-          </div>
-
-
-
-          <!-- Project 2 -->
-          <div class="freelance-card">
-            <h3>Retrieval‑Augmented Generation (RAG) Based Question &amp; Answering / Knowledge Correlation System</h3>
-            <p><strong>Summary:</strong> Developed a semantic retrieval and generative reasoning platform that ingests heterogeneous documents, correlates information, and answers user queries with context‑aware summaries using RAG techniques.</p>
-            <p><a href = "https://github.com/Deepak0kushwaha/rag_qa_system" class="btn secondary"> <strong> Click here for Github Repository</strong></a></p>
-            <p><strong>Technical Approach / Stack:</strong></p>
-            <ul style="text-align: justify; text-justify: inter-word; margin: 0 0 12px 0;">
-              <li>Large language models (e.g., open‑source Llama‑70B) as the generative core.</li>
-              <li>ChromaDB for vector embedding storage and similarity search.</li>
-              <li>Custom document ingestion, chunking and embedding pipelines.</li>
-              <li>Retrieval logic to fetch relevant context, followed by prompt assembly for the generator.</li>
-              <li>Answer refinement and attribution layers to improve factuality.</li>
-            </ul>
-            <p><strong>Impact:</strong> Delivered a knowledge assistant capable of synthesizing cross‑document insights, accelerating research synthesis and decision support in domain‑specific contexts.</p>
-          </div>
-          <!-- Project 3 -->
-          <div class="freelance-card">
-            <h3>Agentic LLM Integration in Blender for Industrial‑Grade CAD Generation</h3>
-            <p><strong>Summary:</strong> Extended Blender with an agentic, retrieval‑augmented LLM interface to translate natural language prompts into parametrically generated, industrial‑grade CAD models with iterative refinement.</p>
-            <p><a href = "https://github.com/Deepak0kushwaha/blender_agentic_cad" class="btn secondary"> <strong> Click here for Github Repository</strong></a></p>
-            <p><strong>Technical Approach / Stack:</strong></p>
-            <ul style="text-align: justify; text-justify: inter-word; margin: 0 0 12px 0;">
-              <li>LLM backend (e.g., ChatGPT‑4o‑mini or comparable) orchestrated via agentic pipelines.</li>
-              <li>Retrieval agents to fetch relevant API/docs/context, RAG prompt constructor and execution agent generating Blender Python scripts.</li>
-              <li>Prompt engineering for precise geometry specification and adaptive iteration.</li>
-              <li>Blender Python addon customization for real‑time model generation and feedback loop.</li>
-            </ul>
-            <p><strong>Impact:</strong> Enabled non‑expert engineers/designers to generate and evolve CAD models through conversational interfaces, significantly reducing early‑stage design friction.</p>
-          </div>
-          <!-- Project 4 -->
-          <div class="freelance-card">
-            <h3>Language‑Agnostic Speaker Identification, Verification, Diarization, Transcription &amp; Translation System</h3>
-            <p><strong>Summary:</strong> Built an end‑to‑end multilingual audio intelligence pipeline that identifies and verifies speakers, segments conversations (diarization), transcribes speech, and translates across languages and dialects—designed for noisy, real‑world environments (e.g., transportation/operational settings).</p>
-            <p><a href = "https://github.com/Deepak0kushwaha/speaker_ai" class="btn secondary"> <strong> Click here for Github Repository</strong></a></p>
-            <p><strong>Technical Approach / Stack:</strong></p>
-            <ul style="text-align: justify; text-justify: inter-word; margin: 0 0 12px 0;">
-              <li>Signal processing: frequency analysis to extract harmonics and dominant components, overlap detection, and noise profiling.</li>
-              <li>Voice Activity Detection (VAD) to isolate speech segments.</li>
-              <li>WhisperX (or equivalent) for high‑fidelity speech‑to‑text transcription.</li>
-              <li>Diarization using <code>pynote</code> to separate and label speakers.</li>
-              <li>Speaker identification &amp; verification logic across languages (language‑agnostic embeddings / similarity metrics).</li>
-              <li>REST API backend delivering structured transcripts, speaker labels, timestamps, and translations to UI dashboards.</li>
-            </ul>
-            <p><strong>Impact:</strong> Enabled scalable, accurate extraction of actionable communication data from large noisy audio corpora, reducing manual review overhead and improving situational awareness in safety‑critical workflows.</p>
-          </div>
-
-          <!-- Project 5 -->
-          <div class="freelance-card">
-            <h3>Cross‑Platform Task Management App (Flutter)</h3>
-            <p><strong>Summary:</strong> Developed a lightweight, cross‑platform To‑Do application to help users organize and track tasks.</p>
-            <p><a href = "https://github.com/Deepak0kushwaha/flutter_task_manager" class="btn secondary"> <strong> Click here for Github Repository</strong></a></p>
-            <p><strong>Technical Approach / Stack:</strong></p>
-            <ul style="text-align: justify; text-justify: inter-word; margin: 0 0 12px 0;">
-              <li>Flutter for cross‑platform mobile/desktop UI.</li>
-              <li>Local storage (e.g., SQLite/shared preferences) for task persistence.</li>
-              <li>Reactive state management for dynamic updates.</li>
-            </ul>
-            <p><strong>Impact:</strong> Provided users with a responsive, portable productivity tool tailored for personal workflow management.</p>
-          </div>
-          <!-- Project 6 -->
-          <div class="freelance-card">
-            <h3>Agentic AI for Financial Modeling &amp; Stock Market Analysis</h3>
-            <p><strong>Summary:</strong> Built an intelligent agent framework to automate financial data ingestion, modeling and insight generation for stock market analysis.</p>
-            <p><a href = " https://github.com/Deepak0kushwaha/agentic_financial_modeling" class="btn secondary"> <strong> Click here for Github Repository</strong></a></p>
-            <p><strong>Technical Approach / Stack:</strong></p>
-            <ul style="text-align: justify; text-justify: inter-word; margin: 0 0 12px 0;">
-              <li>Data pipelines for market data collection and normalization.</li>
-              <li>Predictive modeling using time‑series architectures (e.g., LSTM/transformers).</li>
-              <li>Agentic orchestration to trigger analyses, generate narrative summaries, and surface anomalies/trends.</li>
-              <li>Integration of domain heuristics with learned models for hybrid insight.</li>
-            </ul>
-            <p><strong>Impact:</strong> Enabled semi‑autonomous monitoring and early‑warning signals for financial decision‑making, reducing manual analysis latency.</p>
-          </div>
-          <!-- Project 7 -->
-          <div class="freelance-card">
-            <h3>AI Agent for Content &amp; Image Generation for Content Creators</h3>
-            <p><strong>Summary:</strong> Created an AI assistant that supplies writers and bloggers with contextual content drafts and corresponding visual assets on demand.</p>
-            <p><a href = "https://github.com/Deepak0kushwaha/content_image_ai_agent" class="btn secondary"> <strong> Click here for Github Repository</strong></a></p>
-            <p><strong>Technical Approach / Stack:</strong></p>
-            <ul style="text-align: justify; text-justify: inter-word; margin: 0 0 12px 0;">
-              <li>LLMs for content generation (titles, body copy, SEO‑aware summaries).</li>
-              <li>Image generation or retrieval layers (via prompt‑to‑image or curated asset pipelines).</li>
-              <li>Context conditioning based on topic, audience and tone.</li>
-              <li>Lightweight UI or API endpoint to serve content creators in real time.</li>
-            </ul>
-            <p><strong>Impact:</strong> Streamlined content production, enabling faster publishing cycles with consistent quality and reduced ideation friction.</p>
+          <div class="footer-badge">
+            <img
+              src="https://visitor-badge.laobi.icu/badge?page_id=Deepak0kushwaha.deepak-portfolio"
+              alt="visitor badge"
+            />
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Publications section -->
-    <section id="publications" class="section publications-section">
-      <div class="container">
-        <h2>Publications</h2>
-        <ul class="publication-list">
-          <p><strong>Advanced Engineering Informatics (Q1 journal, Impact Factor - 9.9)</strong> - <a href="https://doi.org/10.1016/j.aei.2025.103181" class="btn primary">"InceptionV3 based blockage fault diagnosis of centrifugal pump"</a></p>
-          <li style="text-align: justify; text-justify: inter-word; margin: 0 0 12px 0;">
-            "Blockages in a centrifugal pump reduce the performance of the pump and can result in operational breakdown if not identified on time. 
-            Thus, it is crucial to identify blockages in the pump to ensure its reliable working. This study presents a modified InceptionV3 Deep 
-            Convolutional Neural Network (CNN) model to classify blockage faults and their severity in centrifugal pumps based on Suction pressure 
-            signal, highlighting its importance in predictive analytics. Initially, the methodology involves plotting two-dimensional Continuous 
-            Wavelet Transform (CWT) plots of pressure signals acquired from the pump test rig. The InceptionV3 model is employed to classify blockages
-             in the pump. Validation and test accuracies of InceptionV3 are achieved as 81.71 % and 81.82 %, respectively at 2000 RPM. Afterward, the
-              blockage fault diagnosis capabilities of InceptionV3 are improved by integrating Exponential Linear Units (ELUs) with Rectified Linear 
-              Units (ReLUs) in the model’s architecture. It is found that validation and test accuracies increased to 95.48 % and 95.36 %, respectively, 
-              in modified InceptionV3 on 35 classes (one healthy and 34 faulty conditions) at 2000RPM. The robustness of the modified InceptionV3 model 
-              is highlighted by comparing test accuracy, precision, recall, and F1 score to the original InceptionV3 model. The proposed methodology 
-              demonstrates the modified InceptionV3 model’s efficacy in classifying various blockage conditions, making it a potent tool for predictive
-               maintenance in industrial settings."
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Contact section -->
-    <section id="contact" class="section contact-section">
-      <div class="container">
-        <h2>Contact</h2>
-        <p>
-          I am open to opportunities and collaborations in AI/ML research,
-          industrial applications and academia. Feel free to reach out!
-        </p>
-        <div class="contact-info">
-          <p>Email: <a href="mailto:dkushwaha6793@gmail.com">dkushwaha6793@gmail.com</a></p>
-          <p>LinkedIn: <a href="https://linkedin.com/in/iitiandeepak-kumar" target="_blank">linkedin.com/in/iitiandeepak-kumar</a></p>
-          <p>ORCiD: <a href="https://orcid.org/0009-0000-4333-3938" target="_blank">0009-0000-4333-3938</a></p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; <span id="year"></span> Deepak Kumar. All rights reserved.</p>
-        <!-- Visitor counter badge from visitor‑badge.laobi.icu -->
-        <p>
-          <img src="https://visitor-badge.laobi.icu/badge?page_id=Deepak0kushwaha.deepak-portfolio"
-              alt="visitor badge" />
-        </p>
       </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
-    <script src="main.js"></script>
+    <script src="media-slider.js?v=20260319-2"></script>
     <script>
-      // Insert current year in footer
-      document.getElementById("year").textContent = new Date().getFullYear();
+      const getParticlePosition = (particle) => {
+        if (!particle) {
+          return null;
+        }
+
+        if (typeof particle.getPosition === "function") {
+          return particle.getPosition();
+        }
+
+        return particle.position || null;
+      };
+
+      const initNeuronSparks = (container) => {
+        const sparkCanvas = document.querySelector("#neural-sparks");
+        const context = sparkCanvas?.getContext("2d");
+
+        if (!sparkCanvas || !context || !container) {
+          return;
+        }
+
+        const particleIds = new WeakMap();
+        let activePairs = new Set();
+        let nextParticleId = 1;
+        let sparks = [];
+
+        const assignParticleId = (particle) => {
+          if (!particleIds.has(particle)) {
+            particleIds.set(particle, nextParticleId++);
+          }
+
+          return particleIds.get(particle);
+        };
+
+        const resizeCanvas = () => {
+          const dpr = window.devicePixelRatio || 1;
+          const width = window.innerWidth;
+          const height = window.innerHeight;
+
+          sparkCanvas.width = Math.floor(width * dpr);
+          sparkCanvas.height = Math.floor(height * dpr);
+          sparkCanvas.style.width = `${width}px`;
+          sparkCanvas.style.height = `${height}px`;
+          context.setTransform(dpr, 0, 0, dpr, 0, 0);
+        };
+
+        const drawGlow = (x, y, radius, color, alpha) => {
+          const gradient = context.createRadialGradient(x, y, 0, x, y, radius);
+          gradient.addColorStop(0, `rgba(${color}, ${alpha})`);
+          gradient.addColorStop(1, `rgba(${color}, 0)`);
+          context.fillStyle = gradient;
+          context.beginPath();
+          context.arc(x, y, radius, 0, Math.PI * 2);
+          context.fill();
+        };
+
+        const spawnSpark = (start, end) => {
+          const offsetX = end.x - start.x;
+          const offsetY = end.y - start.y;
+          const length = Math.hypot(offsetX, offsetY) || 1;
+          const normalX = -offsetY / length;
+          const normalY = offsetX / length;
+
+          sparks.push({
+            start,
+            end,
+            bornAt: performance.now(),
+            duration: 650 + Math.random() * 180,
+            color:
+              Math.random() > 0.14 ? "217, 250, 255" : "255, 122, 204",
+            jitter:
+              (Math.random() * 2.2 + 1.2) * (Math.random() > 0.5 ? 1 : -1),
+            normalX,
+            normalY,
+          });
+        };
+
+        const renderSparks = () => {
+          const width = window.innerWidth;
+          const height = window.innerHeight;
+          const linkDistance = container.retina?.linksDistance || 130;
+          const particles = container.particles?.array || [];
+          const currentPairs = new Set();
+
+          context.clearRect(0, 0, width, height);
+
+          for (let i = 0; i < particles.length; i += 1) {
+            const particleA = particles[i];
+            const positionA = getParticlePosition(particleA);
+
+            if (!positionA) {
+              continue;
+            }
+
+            const idA = assignParticleId(particleA);
+
+            for (let j = i + 1; j < particles.length; j += 1) {
+              const particleB = particles[j];
+              const positionB = getParticlePosition(particleB);
+
+              if (!positionB) {
+                continue;
+              }
+
+              const dx = positionB.x - positionA.x;
+              const dy = positionB.y - positionA.y;
+              const distance = Math.hypot(dx, dy);
+
+              if (distance > linkDistance) {
+                continue;
+              }
+
+              const idB = assignParticleId(particleB);
+              const pairKey = idA < idB ? `${idA}:${idB}` : `${idB}:${idA}`;
+              currentPairs.add(pairKey);
+
+              if (!activePairs.has(pairKey)) {
+                spawnSpark(
+                  { x: positionA.x, y: positionA.y },
+                  { x: positionB.x, y: positionB.y }
+                );
+              }
+            }
+          }
+
+          activePairs = currentPairs;
+
+          const now = performance.now();
+          sparks = sparks.filter((spark) => now - spark.bornAt < spark.duration);
+
+          sparks.forEach((spark) => {
+            const progress = (now - spark.bornAt) / spark.duration;
+            const easedProgress = Math.min(1, progress);
+            const tailProgress = Math.max(0, easedProgress - 0.18);
+            const alpha = 1 - easedProgress;
+            const pulseX =
+              spark.start.x + (spark.end.x - spark.start.x) * easedProgress;
+            const pulseY =
+              spark.start.y + (spark.end.y - spark.start.y) * easedProgress;
+            const tailX =
+              spark.start.x + (spark.end.x - spark.start.x) * tailProgress;
+            const tailY =
+              spark.start.y + (spark.end.y - spark.start.y) * tailProgress;
+            const arcX = pulseX + spark.normalX * spark.jitter * Math.sin(progress * Math.PI);
+            const arcY = pulseY + spark.normalY * spark.jitter * Math.sin(progress * Math.PI);
+
+            context.save();
+            context.strokeStyle = `rgba(${spark.color}, ${0.98 * alpha})`;
+            context.lineWidth = 2.8 + alpha * 1.8;
+            context.lineCap = "round";
+            context.shadowBlur = 26;
+            context.shadowColor = `rgba(${spark.color}, ${alpha})`;
+            context.beginPath();
+            context.moveTo(tailX, tailY);
+            context.lineTo(arcX, arcY);
+            context.lineTo(pulseX, pulseY);
+            context.stroke();
+
+            drawGlow(pulseX, pulseY, 16 + alpha * 12, spark.color, 0.88 * alpha);
+
+            if (easedProgress < 0.24) {
+              drawGlow(
+                spark.start.x,
+                spark.start.y,
+                18 + alpha * 10,
+                spark.color,
+                0.48 * alpha
+              );
+              drawGlow(
+                spark.end.x,
+                spark.end.y,
+                14 + alpha * 8,
+                spark.color,
+                0.28 * alpha
+              );
+            }
+
+            context.restore();
+          });
+
+          requestAnimationFrame(renderSparks);
+        };
+
+        resizeCanvas();
+        window.addEventListener("resize", resizeCanvas);
+        requestAnimationFrame(renderSparks);
+      };
+
+      if (window.tsParticles) {
+        tsParticles.load("tsparticles", {
+          fullScreen: { enable: false },
+          detectRetina: true,
+          fpsLimit: 60,
+          interactivity: {
+            events: {
+              onHover: { enable: true, mode: "repulse" },
+              onClick: { enable: true, mode: "push" },
+              resize: true,
+            },
+            modes: {
+              repulse: { distance: 100 },
+              push: { quantity: 4 },
+            },
+          },
+          particles: {
+            number: { value: 70, density: { enable: true, area: 800 } },
+            color: { value: ["#3ea6ff", "#7dd3fc", "#ff7acc"] },
+            shape: { type: "circle" },
+            opacity: {
+              value: 0.42,
+              animation: {
+                enable: true,
+                speed: 0.8,
+                minimumValue: 0.18,
+                sync: false,
+              },
+            },
+            size: { value: 3.8, random: { enable: true, minimumValue: 1.8 } },
+            links: {
+              enable: true,
+              distance: 130,
+              color: "#3ea6ff",
+              opacity: 0.2,
+              width: 1.25,
+              triangles: {
+                enable: false,
+              },
+            },
+            move: {
+              enable: true,
+              speed: 1.25,
+              direction: "none",
+              random: false,
+              straight: false,
+              outModes: { default: "out" },
+            },
+          },
+        }).then((container) => {
+          initNeuronSparks(container);
+        });
+      }
+
+      const initProjectStack = () => {
+        const deck = document.querySelector("#projects-stack-deck");
+        const tabsRoot = document.querySelector("#project-stack-tabs");
+        const status = document.querySelector("#project-stack-status");
+        const controls = Array.from(
+          document.querySelectorAll("[data-project-stack]")
+        );
+
+        if (!deck || !tabsRoot) {
+          return;
+        }
+
+        const items = Array.from(deck.children);
+
+        if (items.length < 2) {
+          return;
+        }
+
+        const clampVisibleDepth = () => {
+          if (window.innerWidth < 768) {
+            return Math.min(2, items.length - 1);
+          }
+
+          if (window.innerWidth < 1200) {
+            return Math.min(4, items.length - 1);
+          }
+
+          return Math.min(5, items.length - 1);
+        };
+
+        const getProjectStackMetrics = () => {
+          if (window.innerWidth < 768) {
+            return {
+              shiftX: 16,
+              shiftY: 16,
+              insetX: 16,
+              insetY: 18,
+            };
+          }
+
+          if (window.innerWidth < 1200) {
+            return {
+              shiftX: 22,
+              shiftY: 18,
+              insetX: 24,
+              insetY: 24,
+            };
+          }
+
+          return {
+            shiftX: 24,
+            shiftY: 20,
+            insetX: 28,
+            insetY: 28,
+          };
+        };
+
+        const shortenTitle = (title) => {
+          const compactTitle = title.replace(/\s+/g, " ").trim();
+
+          if (compactTitle.length <= 34) {
+            return compactTitle;
+          }
+
+          return `${compactTitle.slice(0, 33).trimEnd()}…`;
+        };
+
+        items.forEach((item, index) => {
+          item.classList.add("project-stack-item");
+          item.dataset.projectIndex = String(index + 1).padStart(2, "0");
+          item.dataset.projectTitle =
+            item.querySelector("h3")?.textContent?.trim() || `Project ${index + 1}`;
+        });
+
+        tabsRoot.innerHTML = "";
+
+        const tabs = items.map((item, index) => {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "project-stack-tab";
+          button.textContent = shortenTitle(item.dataset.projectTitle).replace("â€¦", "...");
+          button.setAttribute("aria-label", item.dataset.projectTitle);
+          button.addEventListener("click", () => {
+            setActive(index);
+          });
+          tabsRoot.append(button);
+          return button;
+        });
+
+        let activeIndex = 0;
+        let resizeTimer = null;
+        let mediaSyncTimer = null;
+        let wheelAccumulator = 0;
+        let lastWheelAdvance = 0;
+
+        const getResolvedMetrics = () => {
+          const visibleDepth = clampVisibleDepth();
+          const { shiftX, shiftY, insetX, insetY } = getProjectStackMetrics();
+
+          return {
+            visibleDepth,
+            shiftX,
+            shiftY,
+            offsetX: shiftX * visibleDepth + insetX,
+            offsetY: shiftY * visibleDepth + insetY,
+          };
+        };
+
+        const syncDeckHeight = () => {
+          deck.classList.remove("project-stack-ready");
+          deck.style.removeProperty("--project-stack-height");
+
+          items.forEach((item) => {
+            item.style.transform = "";
+            item.style.opacity = "";
+            item.style.zIndex = "";
+            item.style.filter = "";
+          });
+
+          const { visibleDepth, shiftX, shiftY, offsetX, offsetY } =
+            getResolvedMetrics();
+          const measureFrame = document.createElement("div");
+          const measureWidth = Math.max(deck.clientWidth - offsetX, 320);
+
+          measureFrame.style.position = "absolute";
+          measureFrame.style.left = "-9999px";
+          measureFrame.style.top = "0";
+          measureFrame.style.width = `${measureWidth}px`;
+          measureFrame.style.visibility = "hidden";
+          measureFrame.style.pointerEvents = "none";
+
+          document.body.append(measureFrame);
+
+          const measuredHeights = items.map((item) => {
+            const clone = item.cloneNode(true);
+            clone.classList.remove("col-lg-6", "project-stack-item", "is-active", "is-hidden");
+            clone.style.display = "block";
+            clone.style.width = "100%";
+            clone.style.maxWidth = "none";
+            clone.style.margin = "0";
+            clone.style.flex = "0 0 auto";
+            measureFrame.append(clone);
+
+            const height = Math.ceil(clone.getBoundingClientRect().height);
+            clone.remove();
+            return height;
+          });
+
+          measureFrame.remove();
+          const tallestCard = Math.max(...measuredHeights);
+          const deckHeight = tallestCard + offsetY + 18;
+
+          deck.style.setProperty("--project-stack-offset-x", `${offsetX}px`);
+          deck.style.setProperty("--project-stack-offset-y", `${offsetY}px`);
+          deck.style.setProperty("--project-stack-shift-x", `${shiftX}px`);
+          deck.style.setProperty("--project-stack-shift-y", `${shiftY}px`);
+          deck.style.setProperty("--project-stack-height", `${deckHeight}px`);
+          deck.classList.add("project-stack-ready");
+          layoutStack();
+        };
+
+        const scheduleDeckHeightSync = () => {
+          window.clearTimeout(mediaSyncTimer);
+          mediaSyncTimer = window.setTimeout(syncDeckHeight, 80);
+        };
+
+        const syncVideoPlayback = () => {
+          items.forEach((item, index) => {
+            item.querySelectorAll("video").forEach((video) => {
+              if (index === activeIndex) {
+                const playPromise = video.play();
+
+                if (playPromise && typeof playPromise.catch === "function") {
+                  playPromise.catch(() => {});
+                }
+              } else {
+                video.pause();
+              }
+            });
+          });
+        };
+
+        const layoutStack = () => {
+          const { visibleDepth, shiftX, shiftY, offsetX, offsetY } =
+            getResolvedMetrics();
+          const isMobile = window.innerWidth < 768;
+
+          items.forEach((item, index) => {
+            const stackOffset =
+              (index - activeIndex + items.length) % items.length;
+            const isActive = stackOffset === 0;
+            const isVisible = stackOffset <= visibleDepth;
+            const depthIndex = Math.min(stackOffset, visibleDepth);
+            const translateX = offsetX - depthIndex * shiftX;
+            const translateY = offsetY - depthIndex * shiftY;
+            const scale = 1;
+            const rotate = 0;
+            const opacity = isActive
+              ? 1
+              : isVisible
+                ? Math.max(0.82, 0.98 - depthIndex * 0.03)
+                : 0;
+
+            item.classList.toggle("is-active", isActive);
+            item.classList.toggle("is-hidden", !isVisible && !isActive);
+            item.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale}) rotate(${rotate}deg)`;
+            item.style.opacity = String(opacity);
+            item.style.zIndex = String(items.length - depthIndex);
+            item.style.filter = isActive
+              ? "none"
+              : isVisible
+                ? "saturate(0.88) brightness(0.9)"
+                : "saturate(0.78) brightness(0.82)";
+            item.setAttribute("aria-hidden", String(!isActive));
+
+            tabs[index].classList.toggle("is-active", isActive);
+            tabs[index].setAttribute("aria-pressed", String(isActive));
+          });
+
+          if (status) {
+            status.textContent = `${String(activeIndex + 1).padStart(2, "0")} / ${String(
+              items.length
+            ).padStart(2, "0")} - ${items[activeIndex].dataset.projectTitle}`;
+          }
+
+          syncVideoPlayback();
+        };
+
+        const setActive = (nextIndex) => {
+          activeIndex = (nextIndex + items.length) % items.length;
+          layoutStack();
+        };
+
+        controls.forEach((control) => {
+          control.addEventListener("click", () => {
+            setActive(
+              activeIndex + (control.dataset.projectStack === "next" ? 1 : -1)
+            );
+          });
+        });
+
+        const projectsShell = deck.closest(".projects-stack-shell");
+
+        projectsShell?.addEventListener(
+          "wheel",
+          (event) => {
+            if (window.innerWidth < 768) {
+              return;
+            }
+
+            const dominantDelta =
+              Math.abs(event.deltaY) >= Math.abs(event.deltaX)
+                ? event.deltaY
+                : event.deltaX;
+
+            if (Math.abs(dominantDelta) < 10) {
+              return;
+            }
+
+            event.preventDefault();
+            wheelAccumulator += dominantDelta;
+
+            const now = performance.now();
+
+            if (
+              Math.abs(wheelAccumulator) >= 48 &&
+              now - lastWheelAdvance > 220
+            ) {
+              setActive(activeIndex + (wheelAccumulator > 0 ? 1 : -1));
+              wheelAccumulator = 0;
+              lastWheelAdvance = now;
+            }
+          },
+          { passive: false }
+        );
+
+        items.forEach((item, index) => {
+          item.addEventListener("click", (event) => {
+            if (index === activeIndex || event.target.closest("a, button")) {
+              return;
+            }
+
+            event.preventDefault();
+            setActive(index);
+          });
+        });
+
+        items.forEach((item) => {
+          item.querySelectorAll("img").forEach((image) => {
+            if (!image.complete) {
+              image.addEventListener("load", scheduleDeckHeightSync, { once: true });
+            }
+          });
+
+          item.querySelectorAll("video").forEach((video) => {
+            if (video.readyState < 1) {
+              video.addEventListener("loadedmetadata", scheduleDeckHeightSync, {
+                once: true,
+              });
+            }
+          });
+        });
+
+        syncDeckHeight();
+
+        window.addEventListener("resize", () => {
+          window.clearTimeout(resizeTimer);
+          resizeTimer = window.setTimeout(syncDeckHeight, 140);
+        });
+      };
+
+      initProjectStack();
+
+      // ── Scroll-triggered fade-up animations ──────────────────────────
+      (function initScrollAnimations() {
+        const targets = document.querySelectorAll(
+          '.section-title, .story-point, .skill-tile, .timeline-item, ' +
+          '.project-detail-card, .research-card, .contact-cta, ' +
+          '.achievement, .research-stack, .publication-viewer-shell'
+        );
+
+        targets.forEach(el => el.classList.add('anim-ready'));
+
+        // Stagger siblings within grid/mosaic containers
+        document.querySelectorAll(
+          '.story-grid, .skills-mosaic, .projects-grid, .achievements-row'
+        ).forEach(container => {
+          container.querySelectorAll('.anim-ready').forEach((el, i) => {
+            el.style.transitionDelay = (i * 68) + 'ms';
+          });
+        });
+
+        const obs = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('anim-visible');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -44px 0px' });
+
+        targets.forEach(el => obs.observe(el));
+      })();
+
+      const header = document.querySelector("#header");
+      const toggle = document.querySelector(".header-toggle");
+      const navLinks = Array.from(
+        document.querySelectorAll("#navmenu a[href^='#']")
+      );
+      const sections = navLinks
+        .map((link) => document.querySelector(link.getAttribute("href")))
+        .filter(Boolean);
+
+      const setActiveLink = (id) => {
+        navLinks.forEach((link) => {
+          link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+        });
+      };
+
+      const closeMobileMenu = () => {
+        header.classList.remove("header-show");
+        toggle.classList.remove("bi-x");
+        toggle.classList.add("bi-list");
+      };
+
+      toggle.addEventListener("click", () => {
+        const isOpen = header.classList.toggle("header-show");
+        toggle.classList.toggle("bi-list", !isOpen);
+        toggle.classList.toggle("bi-x", isOpen);
+      });
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          const targetId = link.getAttribute("href").slice(1);
+          setActiveLink(targetId);
+
+          if (window.innerWidth < 1200) {
+            closeMobileMenu();
+          }
+        });
+      });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          const visibleEntry = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+          if (visibleEntry) {
+            setActiveLink(visibleEntry.target.id);
+          }
+        },
+        {
+          rootMargin: "-35% 0px -45% 0px",
+          threshold: [0.15, 0.3, 0.6],
+        }
+      );
+
+      sections.forEach((section) => observer.observe(section));
+
+      window.addEventListener("load", () => {
+        const currentId = window.location.hash ? window.location.hash.slice(1) : "hero";
+        setActiveLink(currentId);
+      });
+    </script>
+    <script type="module">
+      import * as pdfjsLib from "https://cdn.jsdelivr.net/npm/pdfjs-dist@5.5.207/build/pdf.min.mjs";
+
+      pdfjsLib.GlobalWorkerOptions.workerSrc =
+        "https://cdn.jsdelivr.net/npm/pdfjs-dist@5.5.207/build/pdf.worker.min.mjs";
+
+      const initPublicationPdfViewer = async () => {
+        const canvas = document.querySelector("#publication-pdf-canvas");
+        const status = document.querySelector("#publication-pdf-status");
+        const note = document.querySelector("#publication-pdf-note");
+        const zoomOutButton = document.querySelector("#publication-pdf-zoom-out");
+        const zoomResetButton = document.querySelector("#publication-pdf-zoom-reset");
+        const zoomInButton = document.querySelector("#publication-pdf-zoom-in");
+        const prevButton = document.querySelector("#publication-pdf-prev");
+        const nextButton = document.querySelector("#publication-pdf-next");
+        const stage = document.querySelector(".publication-pdf-stage");
+
+        if (
+          !canvas ||
+          !status ||
+          !note ||
+          !zoomOutButton ||
+          !zoomResetButton ||
+          !zoomInButton ||
+          !prevButton ||
+          !nextButton ||
+          !stage
+        ) {
+          return;
+        }
+
+        const context = canvas.getContext("2d");
+        const pdfUrl =
+          "InceptionV3%20based%20blockage%20fault%20diagnosis%20of%20centrifugal%20pump.pdf";
+
+        let pdfDocument = null;
+        let currentPage = 1;
+        let renderToken = 0;
+        let resizeTimer = null;
+        let zoomLevel = 1;
+
+        const MIN_ZOOM = 0.75;
+        const MAX_ZOOM = 3;
+        const ZOOM_STEP = 0.2;
+
+        const setStatus = (text) => {
+          status.textContent = text;
+        };
+
+        const setButtons = () => {
+          zoomOutButton.disabled = zoomLevel <= MIN_ZOOM;
+          zoomResetButton.disabled = zoomLevel === 1;
+          zoomInButton.disabled = zoomLevel >= MAX_ZOOM;
+          prevButton.disabled = !pdfDocument || currentPage <= 1;
+          nextButton.disabled =
+            !pdfDocument || currentPage >= pdfDocument.numPages;
+        };
+
+        const renderPage = async (pageNumber) => {
+          if (!pdfDocument) {
+            return;
+          }
+
+          const token = ++renderToken;
+          const page = await pdfDocument.getPage(pageNumber);
+
+          if (token !== renderToken) {
+            return;
+          }
+
+          const baseViewport = page.getViewport({ scale: 1 });
+          const availableWidth = Math.max(stage.clientWidth - 32, 280);
+          const fitScale = availableWidth / baseViewport.width;
+          const viewport = page.getViewport({ scale: fitScale * zoomLevel });
+          const dpr = window.devicePixelRatio || 1;
+
+          canvas.width = Math.floor(viewport.width * dpr);
+          canvas.height = Math.floor(viewport.height * dpr);
+          canvas.style.width = `${viewport.width}px`;
+          canvas.style.height = `${viewport.height}px`;
+          context.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+          note.textContent = "Rendering PDF...";
+          note.hidden = false;
+
+          await page.render({
+            canvasContext: context,
+            viewport,
+          }).promise;
+
+          if (token !== renderToken) {
+            return;
+          }
+
+          note.hidden = true;
+          setStatus(
+            `Page ${pageNumber} of ${pdfDocument.numPages} / Zoom ${Math.round(
+              zoomLevel * 100
+            )}%`
+          );
+          setButtons();
+        };
+
+        const updateZoom = async (nextZoom) => {
+          if (!pdfDocument) {
+            return;
+          }
+
+          const clampedZoom = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, nextZoom));
+
+          if (Math.abs(clampedZoom - zoomLevel) < 0.001) {
+            return;
+          }
+
+          zoomLevel = Number(clampedZoom.toFixed(2));
+          stage.scrollTop = 0;
+          stage.scrollLeft = 0;
+          zoomResetButton.textContent = `${Math.round(zoomLevel * 100)}%`;
+          await renderPage(currentPage);
+        };
+
+        try {
+          const loadingTask = pdfjsLib.getDocument(pdfUrl);
+          pdfDocument = await loadingTask.promise;
+          await renderPage(currentPage);
+        } catch (error) {
+          console.error(error);
+          note.hidden = false;
+          note.textContent = "Unable to load the PDF in the embedded viewer.";
+          setStatus("PDF viewer unavailable");
+          setButtons();
+          return;
+        }
+
+        zoomOutButton.addEventListener("click", async () => {
+          await updateZoom(zoomLevel - ZOOM_STEP);
+        });
+
+        zoomResetButton.addEventListener("click", async () => {
+          await updateZoom(1);
+        });
+
+        zoomInButton.addEventListener("click", async () => {
+          await updateZoom(zoomLevel + ZOOM_STEP);
+        });
+
+        prevButton.addEventListener("click", async () => {
+          if (!pdfDocument || currentPage <= 1) {
+            return;
+          }
+
+          currentPage -= 1;
+          stage.scrollTop = 0;
+          stage.scrollLeft = 0;
+          await renderPage(currentPage);
+        });
+
+        nextButton.addEventListener("click", async () => {
+          if (!pdfDocument || currentPage >= pdfDocument.numPages) {
+            return;
+          }
+
+          currentPage += 1;
+          stage.scrollTop = 0;
+          stage.scrollLeft = 0;
+          await renderPage(currentPage);
+        });
+
+        stage.addEventListener(
+          "wheel",
+          async (event) => {
+            if (!event.ctrlKey) {
+              return;
+            }
+
+            event.preventDefault();
+            await updateZoom(zoomLevel + (event.deltaY < 0 ? ZOOM_STEP : -ZOOM_STEP));
+          },
+          { passive: false }
+        );
+
+        stage.addEventListener("contextmenu", (event) => {
+          event.preventDefault();
+        });
+
+        stage.addEventListener("dragstart", (event) => {
+          event.preventDefault();
+        });
+
+        stage.addEventListener("keydown", (event) => {
+          const isModifierPressed = event.ctrlKey || event.metaKey;
+          const key = event.key.toLowerCase();
+
+          if (!isModifierPressed) {
+            return;
+          }
+
+          if (key === "s" || key === "p") {
+            event.preventDefault();
+          }
+        });
+
+        stage.addEventListener("mousedown", () => {
+          stage.focus({ preventScroll: true });
+        });
+
+        window.addEventListener("resize", () => {
+          if (!pdfDocument) {
+            return;
+          }
+
+          window.clearTimeout(resizeTimer);
+          resizeTimer = window.setTimeout(() => {
+            renderPage(currentPage);
+          }, 140);
+        });
+      };
+
+      initPublicationPdfViewer();
+    </script>
+
+    <!-- ── Visitor Counter (Firebase Realtime Database) ───────────────────
+         SETUP (one-time):
+         1. Go to https://console.firebase.google.com/ → Create project (free)
+         2. Build → Realtime Database → Create database → Start in TEST mode
+         3. Copy your databaseURL (looks like https://YOUR-ID-default-rtdb.firebaseio.com)
+         4. Replace PASTE_YOUR_DATABASE_URL_HERE below with that URL
+         5. In Firebase console → Realtime Database → Rules, paste:
+            {
+              "rules": {
+                "visitors": { ".read": true, ".write": true }
+              }
+            }
+            and click Publish (you can tighten rules later)
+    ──────────────────────────────────────────────────────────────────── -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+      import { getDatabase, ref, runTransaction, onValue }
+        from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+      // ▼▼▼ REPLACE this URL with your own Firebase Realtime Database URL ▼▼▼
+      const DATABASE_URL = "PASTE_YOUR_DATABASE_URL_HERE";
+      // ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲
+
+      const STORAGE_KEY = "dpk_v1_counted";
+
+      if (!DATABASE_URL || DATABASE_URL === "PASTE_YOUR_DATABASE_URL_HERE") {
+        // Firebase not configured yet — show a placeholder count
+        const el = document.getElementById("visitor-count");
+        if (el) el.textContent = "—";
+      } else {
+        const app = initializeApp({ databaseURL: DATABASE_URL });
+        const db  = getDatabase(app);
+        const counterRef = ref(db, "visitors/count");
+
+        const animateCount = (from, to) => {
+          const el = document.getElementById("visitor-count");
+          if (!el) return;
+          if (from === to) { el.textContent = to.toLocaleString(); return; }
+          const start = performance.now();
+          const duration = Math.min(1200, 300 + Math.abs(to - from) * 0.4);
+          const step = (now) => {
+            const t = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - t, 3);
+            el.textContent = Math.round(from + (to - from) * eased).toLocaleString();
+            if (t < 1) requestAnimationFrame(step);
+          };
+          requestAnimationFrame(step);
+        };
+
+        const isNewVisitor = !localStorage.getItem(STORAGE_KEY);
+
+        if (isNewVisitor) {
+          // Atomically increment, then read the new value
+          runTransaction(counterRef, (current) => (current || 0) + 1)
+            .then(({ snapshot }) => {
+              const total = snapshot.val() || 0;
+              animateCount(Math.max(0, total - 1), total);
+              localStorage.setItem(STORAGE_KEY, "1");
+              const badge = document.getElementById("visitor-you-badge");
+              if (badge) {
+                badge.style.display = "";
+                setTimeout(() => {
+                  badge.style.transition = "opacity 0.6s ease";
+                  badge.style.opacity = "0";
+                  setTimeout(() => { badge.style.display = "none"; }, 700);
+                }, 3500);
+              }
+            })
+            .catch(() => {});
+        } else {
+          // Returning visitor — just read the current count
+          onValue(counterRef, (snapshot) => {
+            const total = snapshot.val() || 0;
+            animateCount(0, total);
+          }, { onlyOnce: true });
+        }
+      }
     </script>
   </body>
 </html>

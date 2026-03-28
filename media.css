@@ -49,7 +49,7 @@
   align-items: center;
   justify-content: center;
   background-color: rgba(8, 26, 44, 0.2);
-  border-radius: 8px;
+  border-radius: 24px;
 }
 
 /* Each media item (image, video or link) fills the window and
@@ -79,19 +79,22 @@
 /* Style for the Prev and Next buttons */
 .media-prev-btn,
 .media-next-btn {
-  padding: 8px 16px;
+  padding: 8px 18px;
   font-size: 14px;
-  background-color: #3ea6ff;
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
+  font-weight: 600;
+  background: rgba(12, 26, 46, 0.92);
+  color: #eef6ff;
+  border: 1px solid rgba(125, 211, 252, 0.18);
+  border-radius: 999px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.22s ease, border-color 0.22s ease, color 0.22s ease;
 }
 
 .media-prev-btn:hover,
 .media-next-btn:hover {
-  background-color: #2c82c9;
+  background: rgba(34, 231, 161, 0.14);
+  border-color: rgba(34, 231, 161, 0.42);
+  color: #22e7a1;
 }
 
 /* Keyframes for sliding animations */
