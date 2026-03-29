@@ -364,6 +364,13 @@ document.addEventListener("DOMContentLoaded", () => {
     scheduleNext();
   };
 
+  const slideAnimClasses = [
+    "slide-in-right",
+    "slide-in-left",
+    "slide-out-left",
+    "slide-out-right",
+  ];
+
   const showMedia = (direction = "next") => {
     const currentMedia = mediaFiles[currentIndex];
 
@@ -375,7 +382,24 @@ document.addEventListener("DOMContentLoaded", () => {
     displayToken += 1;
     const currentDisplayToken = displayToken;
     const nextElement = buildMediaElement(currentMedia, currentDisplayToken);
-    const currentElement = mediaWindow.querySelector(".media-item");
+
+    // Abort any in-progress slide: discard animating elements immediately
+    // and keep only the last fully-settled item as the transition origin.
+    // Without this, rapid navigation stacks 3+ elements in the window.
+    const allItems = Array.from(mediaWindow.querySelectorAll(".media-item"));
+    let currentElement = null;
+    for (const el of allItems) {
+      const isAnimating = slideAnimClasses.some((c) => el.classList.contains(c));
+      if (isAnimating) {
+        el.remove();
+      } else {
+        if (currentElement) {
+          currentElement.remove(); // shouldn't happen, but guard duplicates
+        }
+        currentElement = el;
+      }
+    }
+
     const inClass = direction === "next" ? "slide-in-right" : "slide-in-left";
     const outClass = direction === "next" ? "slide-out-left" : "slide-out-right";
 

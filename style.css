@@ -2640,8 +2640,9 @@ main p,
     pointer-events: auto !important;
   }
 
-  /* PDF viewer — keep visible, optimise for touch */
+  /* PDF viewer — force visible and optimise for touch */
   .publication-viewer-shell {
+    display: flex !important;
     padding: 16px 12px;
   }
 
